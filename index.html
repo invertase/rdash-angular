@@ -9,7 +9,6 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/dashboard.min.css">
-  <link rel="stylesheet" type="text/css" href="css/content.min.css">
 
   <script type="text/javascript" src="js/angular.min.js"></script>
   <script type="text/javascript" src="js/angular-cookies.js"></script>
@@ -18,7 +17,7 @@
 
 </head>
 <body ng-controller="MasterCtrl">
-  <div id="page-wrapper" ng-init="toggle" ng-class="{'active': toggle}">
+  <div id="page-wrapper" ng-class="{'active': toggle}">
 
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
@@ -33,7 +32,7 @@
           <span>NAVIGATION</span>
         </li>
         <li class="sidebar-list">
-          <a href="#">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
+          <a href="http://127.0.0.1/git/Sourcemod-Server-Manager-System/public/">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
         </li>
         <li class="sidebar-list">
           <a href="#">Servers <span class="menu-icon fa fa-tasks"></span></a>
@@ -51,37 +50,95 @@
       </ul>
     </div>
           
-      <!-- Page content -->
-      <div id="content-wrapper">
-        <!-- Keep all page content within the page-content inset div! -->
-        <div class="page-content">
-          <div class="row">
-              <div class="header col-xs-12">
-                <div class="meta pull-left">
-                  <div class="page">
-                    Toggle = {{toggle}}
-                  </div>
-                  <div class="breadcrumb-links">
-                    Home / Dashboard {{window_width}}
-                  </div>
-                </div>
-                <div class="user pull-right">
-                  <ul>
-                    <li> 
-                    </li>
-                    <li></li>
-                    <li>
-                      <a href="#">
-                        <img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/2b/2b645d34509714b08352da02f13d8db7f0b5c1d5_full.jpg">
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+    <!-- Page content -->
+    <div id="content-wrapper">
+      <div class="page-content">
+        <div class="row header">
+          <div class="col-xs-12">
+            <div class="meta pull-left">
+              <div class="page">
+                Dashboard
               </div>
-             
+              <div class="breadcrumb-links">
+                Home / Dashboard {{window_width}}
+              </div>
+            </div>
+            <div class="user pull-right">
+              <ul>
+                <li>
+                  <a href="#">
+                    <img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/2b/2b645d34509714b08352da02f13d8db7f0b5c1d5_full.jpg">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="widget">
+              <div class="widget-body">Body</div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="widget">
+              <div class="widget-body">Body</div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="widget">
+              <div class="widget-body">Body</div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="widget">
+              <div class="widget-body">Body</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="widget">
+              <div class="widget-title"><i class="fa fa-cubes"></i> Game Servers</div>
+              <div class="widget-body no-padding">
+
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>Server Name</td>
+                      <td>0/32</td>
+                    </tr>                    <tr>
+                      <td>Server Name</td>
+                      <td>0/32</td>
+                    </tr>                    <tr>
+                      <td>Server Name</td>
+                      <td>0/32</td>
+                    </tr>                    <tr>
+                      <td>Server Name</td>
+                      <td>0/32</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="widget">
+              <div class="widget-title"><i class="fa fa-cubes"></i> Game Servers</div>
+              <div class="widget-body">Body</div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="widget">
+              <div class="widget-title"><i class="fa fa-cubes"></i> Game Servers</div>
+              <div class="widget-body">Body</div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
       
     </div>
 </body>

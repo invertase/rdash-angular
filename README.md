@@ -1,10 +1,10 @@
 ## AngularJS + Bootstrap Responsive Dashboard
 
-This dashboard front-end was created as I was lacking a simple responsive but slick looking dashboard for another project of mine.  Other free dashboards were bloated with external plugins and required a lot of hackery out of the box - plus the fact they were powered bu jQuery. The design takes inspiration from other dashboards around, but the code to create the layout is my own. Feel free to chop it up as much as you want.
+This dashboard front-end was created as I was lacking a simple responsive but slick looking dashboard for another project of mine.  Other free dashboards were bloated with external plugins and required a lot of hackery out of the box - plus the fact many were powered by jQuery. The design takes inspiration from other dashboards around, but the code to create the layout is my own. Feel free to chop it up as much as you want.
 
-[Screen Shot 1](http://i.imgur.com/MRzDg7x.jpg)
-[Screen Shot 2](http://i.imgur.com/ARI6LDM.jpg)
-[Screen Shot 3](http://i.imgur.com/WbCtM0Y.jpg)
+> [Screen Shot 1](http://i.imgur.com/MRzDg7x.jpg)
+> [Screen Shot 2](http://i.imgur.com/ARI6LDM.jpg)
+> [Screen Shot 3](http://i.imgur.com/WbCtM0Y.jpg)
 
 ### Usage
 
@@ -28,17 +28,17 @@ The grid layout and components are powered by [Bootstrap](http://getbootstrap.co
 
 The `css/dashboard.min.css` file is the base CSS file for the dashboard, however it also contains the styling for the "widgets".
 
-A widget is esentially a white container box with some styling, that will expand 100% of it's parent container. To seperate these out, I suggest putting them inside a bootstrap grid item, e.g:
+A widget is essentially a white container box with some styling, that will expand 100% of it's parent container. To seperate these out, I suggest putting them inside a bootstrap grid item, e.g:
 
 ```
 <div class="col-lg-3">
 	<div class="widget">
 ```
 
-A widget has a `widget-body` (main content), and also a `widget-title` (title area) which can be used individually inside the widget.
+A widget has a `widget-title` (title area) and also a `widget-body` (main content) which can be used individually inside the widget.
 
 Any content can be inside a `widget-body`, which will be padded by default. Three set sizes for the body are available and will provide a scroller for the content when the content breaks the height. Apply either `large` `medium` or `small` to the `widget-body` class, e.g: `<div class="widget-body medium">`.
 
-If no size is set, the content will expand vertically based on content size.
+> If no size is set, the content will expand vertically based on content size.
 
 Widget table styling is also included. Simply place a bootstrap table inside your `widget-body`. It's recommended you remove padding on the `widget-body` to take the table to maximum width by applying `no-padding` to the class, e.g: `<div class="widget-body no-padding">`.

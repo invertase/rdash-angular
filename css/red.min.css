@@ -1,0 +1,12 @@
+ul.sidebar .sidebar-main a, .sidebar-footer, ul.sidebar .sidebar-list a:hover {
+	background: #592727;
+}
+#sidebar-wrapper {
+	background: #6a3030;
+}
+ul.sidebar .sidebar-title {
+	color: #b76262;
+}
+#page-wrapper:not(.active) ul.sidebar .sidebar-title.separator {
+	background: #592727;
+}

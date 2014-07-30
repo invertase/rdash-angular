@@ -1,14 +1,19 @@
 <!doctype html>
-<html lang="en" ng-app="SSMS">
+<html lang="en" ng-app="Dashboard">
 <head>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>SSMS</title>
+	<title>Dashboard</title>
 
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/dashboard.min.css">
+  <link rel="stylesheet" type="text/css" href="css/blue.min.css">
+  <!--
+  <link rel="stylesheet" type="text/css" href="css/green.min.css">
+  <link rel="stylesheet" type="text/css" href="css/red.min.css">
+  -->
 
   <script type="text/javascript" src="js/angular.min.js"></script>
   <script type="text/javascript" src="js/angular-cookies.js"></script>
@@ -17,22 +22,21 @@
 
 </head>
 <body ng-controller="MasterCtrl">
-  <div id="page-wrapper" ng-class="{'active': toggle}">
+  <div id="page-wrapper" ng-class="{'active': toggle}" ng-cloak>
 
     <!-- Sidebar -->
+
     <div id="sidebar-wrapper">
       <ul class="sidebar">
         <li class="sidebar-main">
           <a href="#" ng-click="toggleSidebar()">
-            SSMS 
+            Dashboard
             <span class="menu-icon glyphicon glyphicon-transfer"></span>
           </a>
         </li>
-        <li class="sidebar-title">
-          <span>NAVIGATION</span>
-        </li>
+        <li class="sidebar-title"><span>NAVIGATION</span></li>
         <li class="sidebar-list">
-          <a href="http://127.0.0.1/git/Sourcemod-Server-Manager-System/public/">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
+          <a href="#">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
         </li>
         <li class="sidebar-list">
           <a href="#">Servers <span class="menu-icon fa fa-tasks"></span></a>
@@ -40,19 +44,37 @@
         <li class="sidebar-list">
           <a href="#">Settings <span class="menu-icon fa fa-cogs"></span></a>
         </li>
+        <li class="sidebar-title separator"><span>QUICK LINKS</span></li>
         <li class="sidebar-list">
-          <a href="#">Something <span class="menu-icon glyphicon glyphicon-transfer"></span></a>
-        </li>
-        <li class="sidebar-title"><span>QUICK LINKS</span></li>
-        <li class="sidebar-list">
-          <a href="#">Forums <span class="menu-icon fa fa-external-link"></span></a>
+          <a href="#" target="_blank">Forums <span class="menu-icon fa fa-external-link"></span></a>
         </li>
       </ul>
+      <div class="sidebar-footer">
+        <div class="col-xs-4">
+          <a href="https://github.com/Ehesp/Responsive-Dashboard" target="_blank">
+            Github
+          </a>
+        </div>
+        <div class="col-xs-4">
+          <a href="#" target="_blank">
+            About
+          </a>
+        </div>
+        <div class="col-xs-4">
+          <a href="#">
+            Support
+          </a>
+        </div>
+      </div>
     </div>
-          
-    <!-- Page content -->
+
+    <!-- End Sidebar -->
+
     <div id="content-wrapper">
       <div class="page-content">
+
+        <!-- Header Bar -->
+
         <div class="row header">
           <div class="col-xs-12">
             <div class="meta pull-left">
@@ -60,86 +82,186 @@
                 Dashboard
               </div>
               <div class="breadcrumb-links">
-                Home / Dashboard {{window_width}}
+                Home / Dashboard
               </div>
             </div>
             <div class="user pull-right">
-              <ul>
-                <li>
-                  <a href="#">
-                    <img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/2b/2b645d34509714b08352da02f13d8db7f0b5c1d5_full.jpg">
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="widget">
-              <div class="widget-body">Body</div>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="widget">
-              <div class="widget-body">Body</div>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="widget">
-              <div class="widget-body">Body</div>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="widget">
-              <div class="widget-body">Body</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="widget">
-              <div class="widget-title"><i class="fa fa-cubes"></i> Game Servers</div>
-              <div class="widget-body no-padding">
-
-                <table class="table">
-                  <tbody>
-                    <tr>
-                      <td>Server Name</td>
-                      <td>0/32</td>
-                    </tr>                    <tr>
-                      <td>Server Name</td>
-                      <td>0/32</td>
-                    </tr>                    <tr>
-                      <td>Server Name</td>
-                      <td>0/32</td>
-                    </tr>                    <tr>
-                      <td>Server Name</td>
-                      <td>0/32</td>
-                    </tr>
-                  </tbody>
-                </table>
-
-
+              <div class="item dropdown">
+                <a href="#" class="dropdown-toggle">
+                  <img src="img/avatar.jpg">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li class="dropdown-header">
+                    Joe Bloggs
+                  </li>
+                  <li class="divider"></li>
+                  <li class="link">
+                    <a href="#">
+                      Profile
+                    </a>
+                  </li>
+                  <li class="link">
+                    <a href="#">
+                      Menu Item
+                    </a>
+                  </li>
+                  <li class="link">
+                    <a href="#">
+                      Menu Item
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li class="link">
+                    <a href="#">
+                      Logout
+                    </a>
+                  </li>
+                </ul>               
+              </div>
+              <div class="item dropdown">
+               <a href="#" class="dropdown-toggle">
+                  <i class="fa fa-bell-o"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li class="dropdown-header">
+                    Notifications
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#">Server Down!</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="widget">
-              <div class="widget-title"><i class="fa fa-cubes"></i> Game Servers</div>
-              <div class="widget-body">Body</div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="widget">
-              <div class="widget-title"><i class="fa fa-cubes"></i> Game Servers</div>
-              <div class="widget-body">Body</div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-      
-    </div>
+
+        <!-- End Header Bar -->
+
+        <!-- Main Content -->
+
+          <div class="row">
+            <div class="col-lg-3 col-xs-6">
+              <div class="widget">
+                <div class="widget-body">
+                  <div class="widget-icon green pull-left">
+                    <i class="fa fa-users"></i>
+                  </div>
+                  <div class="widget-content pull-left">
+                    <div class="title">80</div>
+                    <div class="comment">Active User(s)</div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+              <div class="widget">
+                <div class="widget-body">
+                  <div class="widget-icon red pull-left">
+                    <i class="fa fa-tasks"></i>
+                  </div>
+                  <div class="widget-content pull-left">
+                    <div class="title">16</div>
+                    <div class="comment">Servers</div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+              <div class="widget">
+                <div class="widget-body">
+                  <div class="widget-icon orange pull-left">
+                    <i class="fa fa-sitemap"></i>
+                  </div>
+                  <div class="widget-content pull-left">
+                    <div class="title">225</div>
+                    <div class="comment">Documents</div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+            <div class="spacer visible-xs"></div>
+            <div class="col-lg-3 col-xs-6">
+              <div class="widget">
+                <div class="widget-body">
+                  <div class="widget-icon blue pull-left">
+                    <i class="fa fa-support"></i>
+                  </div>
+                  <div class="widget-content pull-left">
+                    <div class="title">62</div>
+                    <div class="comment">Open Requests</div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="widget">
+                <div class="widget-title"><i class="fa fa-cubes"></i> Servers</div>
+                <div class="widget-body medium no-padding">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <tbody>
+                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
+                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
+                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
+                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
+                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
+                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
+                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
+                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
+                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
+                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
+                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
+                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
+                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="widget">
+                <div class="widget-title"><i class="fa fa-users"></i> Users</div>
+                <div class="widget-body medium no-padding">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead><tr><th>Username</th><th>Role</th></tr></thead>
+                      <tbody>
+                        <tr><td>Joe Bloggs</td><td>Super Admin</td></tr>
+                        <tr><td>Timothy Hernandez</td><td>Admin</td></tr>
+                        <tr><td>Joe Bickham</td><td>User</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="widget">
+                <div class="widget-title"><i class="fa fa-warning"></i> Notifications</div>
+                <div class="widget-body small">
+                  <div class="alert alert-success">No reported server issues</div>
+                  <div class="alert alert-info">A new user 'Joe Bickham' joined!</div>
+                  <div class="alert alert-warning">Server 'HAProxyVM2' did not respond on it's last check, warning issued!</div>
+                  <div class="alert alert-danger">Server 'APPPHVM04' has not responded on it's last two checks!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- End Main Content -->
+
+      </div><!-- End Page Content -->
+    </div><!-- End Content Wrapper -->
+  </div><!-- End Page Wrapper -->
 </body>
 </html>

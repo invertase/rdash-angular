@@ -2,9 +2,13 @@
 
 This dashboard front-end was created as I was lacking a simple responsive but slick looking dashboard for another project of mine.  Other free dashboards were bloated with external plugins and required a lot of hackery out of the box - plus the fact many were powered by jQuery. The design takes inspiration from other dashboards around, but the code to create the layout is my own. Feel free to chop it up as much as you want.
 
-> [Screen Shot 1](http://i.imgur.com/MRzDg7x.jpg)
-> [Screen Shot 2](http://i.imgur.com/ARI6LDM.jpg)
-> [Screen Shot 3](http://i.imgur.com/WbCtM0Y.jpg)
+Live Example:
+* http://elliothesp.co.uk/responsive-dashboard
+
+Screenshots:
+* [Screen Shot 1](http://i.imgur.com/MRzDg7x.jpg)
+* [Screen Shot 2](http://i.imgur.com/ARI6LDM.jpg)
+* [Screen Shot 3](http://i.imgur.com/WbCtM0Y.jpg)
 
 ### Usage
 

@@ -8,11 +8,11 @@
 
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/dashboard.css">
-  <link rel="stylesheet" type="text/css" href="css/blue.css">
+  <link rel="stylesheet" type="text/css" href="css/dashboard/dashboard.css">
+  <link rel="stylesheet" type="text/css" href="css/themes/blue.css">
   <!--
-  <link rel="stylesheet" type="text/css" href="css/green.css">
-  <link rel="stylesheet" type="text/css" href="css/red.css">
+  <link rel="stylesheet" type="text/css" href="css/themes/green.css">
+  <link rel="stylesheet" type="text/css" href="css/themes/red.css">
   -->
 
   <script type="text/javascript" src="js/angular.min.js"></script>
@@ -139,6 +139,11 @@
         <!-- End Header Bar -->
 
         <!-- Main Content -->
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="alert alert-success">Thanks for visiting! Feel free to create pull requests to improve the dashboard!</div>
+          </div>
+        </div>
 
           <div class="row">
             <div class="col-lg-3 col-md-6 col-xs-12">
@@ -202,7 +207,7 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="widget">
-                <div class="widget-title"><i class="fa fa-cubes"></i> Servers</div>
+                <div class="widget-title"><i class="fa fa-tasks"></i> Servers</div>
                 <div class="widget-body medium no-padding">
                   <div class="table-responsive">
                     <table class="table">
@@ -228,15 +233,29 @@
             </div>
             <div class="col-lg-6">
               <div class="widget">
-                <div class="widget-title"><i class="fa fa-users"></i> Users</div>
+                <div class="widget-title">
+                  <i class="fa fa-users"></i> Users
+                  <input type="text" placeholder="Search" class="form-control input-sm pull-right" />
+                  <div class="clearfix"></div>
+                </div>
                 <div class="widget-body medium no-padding">
                   <div class="table-responsive">
                     <table class="table">
-                      <thead><tr><th>Username</th><th>Role</th></tr></thead>
+                      <thead>
+                        <tr>
+                          <th class="text-center">ID</th>
+                          <th>Username</th>
+                          <th>Role</th>
+                          <th>Account</th>
+                        </tr>
+                      </thead>
                       <tbody>
-                        <tr><td>Joe Bloggs</td><td>Super Admin</td></tr>
-                        <tr><td>Timothy Hernandez</td><td>Admin</td></tr>
-                        <tr><td>Joe Bickham</td><td>User</td></tr>
+                        <tr>
+                          <td class="text-center">1</td>
+                          <td>Joe Bloggs</td>
+                          <td>Super Admin</td>
+                          <td>AZ23045</td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>
@@ -247,12 +266,25 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="widget">
-                <div class="widget-title"><i class="fa fa-warning"></i> Notifications</div>
-                <div class="widget-body small">
+                <div class="widget-title">
+                  <i class="fa fa-warning"></i> Notifications
+                  <button class="btn btn-sm btn-success pull-right">Clear</button>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="widget-body">
                   <div class="alert alert-success">No reported server issues</div>
                   <div class="alert alert-info">A new user 'Joe Bickham' joined!</div>
                   <div class="alert alert-warning">Server 'HAProxyVM2' did not respond on it's last check, warning issued!</div>
                   <div class="alert alert-danger">Server 'APPPHVM04' has not responded on it's last two checks!</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="widget">
+                <div class="widget-title"><i class="fa fa-cog fa-spin"></i> Loading Directive</div>
+                <div class="widget-body">
+                  <!-- Check out the Angular Directive inside bootstrap.js! -->
+                  <loading></loading>
                 </div>
               </div>
             </div>

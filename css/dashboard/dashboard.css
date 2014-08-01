@@ -192,10 +192,8 @@
   #page-wrapper.active #sidebar-wrapper {
     left: 150px;
   }
-  #content-wrapper {
-    width: 100%;
-  }
-  /* Header */
+
+/* Header */
   .row.header {
     height: 60px;
     background: #fff;
@@ -287,11 +285,6 @@
     padding-right: 7px;
   }
 
-  /* Toolbars */
-  .toolbar button {
-    margin-left: 10px;
-  }
-
   /* Widgets */
   .widget {
     background: #ffffff;
@@ -321,9 +314,6 @@
   }
   .widget .widget-body table tbody * {
     font-size: 13px !important;
-  }
-    .widget .widget-body table tbody .roles i {
-    font-size: 17px !important;
   }
   .widget .widget-body .error {
     padding: 20px;

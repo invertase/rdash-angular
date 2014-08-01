@@ -3,7 +3,7 @@
 This dashboard front-end was created as I was lacking a simple responsive but slick looking dashboard for another project of mine.  Other free dashboards were bloated with external plugins and required a lot of hackery out of the box - plus the fact many were powered by jQuery. The design takes inspiration from other dashboards around, but the code to create the layout is my own. Feel free to chop it up as much as you want.
 
 Live Example:
-* http://elliothesp.co.uk/responsive-dashboard
+* http://ehesp.github.io/Responsive-Dashboard/
 
 Screenshots:
 * [Screen Shot 1](http://i.imgur.com/MRzDg7x.jpg)
@@ -55,4 +55,4 @@ The loading 'spinner' is a simple directive created by AngularJS within the `js/
 
 Usage of the directive: `<loading></loading>` or `<div loading></div>`
 
-Want to change it, simple replace the template and CSS!
+Want to change it, simply replace the template and CSS!

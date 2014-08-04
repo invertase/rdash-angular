@@ -44,15 +44,15 @@ Any content can be inside a `widget-body`, which will be padded by default. Thre
 
 ###### Widget Body
 
-*Padding*
+**Padding**
 
 Padding inside widgets is set to 20px. To remove this padding, apply the `no-padding` class on the widget body, e.g: `<div class="widget-body no-padding">`.
 
-*Tables*
+**Tables**
 
 Styling for tables is included. Ensure your table has the class `table` and feel free to apply other Bootstrap classes. For table headings use `thead` and the body `tbody`. Tables work well with the `no-padding` class.
 
-*Messages & Errors*
+**Messages & Errors**
 
 A message can be set within the body whether it has padding or not - simply place a `<div>` within the body with the class of `message`, e.g:
 

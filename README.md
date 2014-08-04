@@ -31,7 +31,7 @@ The `css/dashboard/dashboard.min.css` file is the base CSS file for the dashboar
 
 A widget is essentially a white container box with some styling, that will expand 100% of it's parent container. To seperate these out, I suggest putting them inside a bootstrap grid item, e.g:
 
-```
+```HTML
 <div class="col-lg-3">
 	<div class="widget">
 ```

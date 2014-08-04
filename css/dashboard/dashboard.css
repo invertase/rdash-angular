@@ -315,8 +315,10 @@
   .widget .widget-body table tbody * {
     font-size: 13px !important;
   }
-  .widget .widget-body .error {
+  .widget .widget-body.no-padding .error, .widget .widget-body.no-padding .message {
     padding: 20px;
+  }
+  .widget .widget-body .error {
     color: #ff0000;
   }
   .widget .widget-body table thead {

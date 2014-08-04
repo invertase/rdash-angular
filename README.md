@@ -5,11 +5,6 @@ This dashboard front-end was created as I was lacking a simple responsive but sl
 Live Example:
 * http://ehesp.github.io/Responsive-Dashboard/
 
-Screenshots:
-* [Screen Shot 1](http://i.imgur.com/MRzDg7x.jpg)
-* [Screen Shot 2](http://i.imgur.com/ARI6LDM.jpg)
-* [Screen Shot 3](http://i.imgur.com/WbCtM0Y.jpg)
-
 ### Usage
 
 Simply clone, or download and unzip this repository and access the root via your browser. There is only one page on show (`index.html`), and the relevant sections have been commented.
@@ -47,7 +42,37 @@ Any content can be inside a `widget-body`, which will be padded by default. Thre
 
 > If no size is set, the content will expand vertically based on content size.
 
-Widget table styling is also included. Simply place a bootstrap table inside your `widget-body`. It's recommended you remove padding on the `widget-body` to take the table to maximum width by applying `no-padding` to the class, e.g: `<div class="widget-body no-padding">`.
+###### Widget Body
+
+*Padding*
+
+Padding inside widgets is set to 20px. To remove this padding, apply the `no-padding` class on the widget body, e.g: `<div class="widget-body no-padding">`.
+
+*Tables*
+
+Styling for tables is included. Ensure your table has the class `table` and feel free to apply other Bootstrap classes. For table headings use `thead` and the body `tbody`. Tables work well with the `no-padding` class.
+
+*Messages & Errors*
+
+A message can be set within the body whether it has padding or not - simply place a `<div>` within the body with the class of `message`, e.g:
+
+```HTML
+<div class="widget-body no-padding">
+	<div class="message" ng-if="servers.length == 0">
+		There are no servers in the application!
+	</div>
+</div>
+```
+
+If you wish to set this text to red, to display an error for example, simply replace `message` with `error`, e.g:
+
+```HTML
+<div class="widget-body no-padding">
+	<div class="error" ng-if="error">
+		An error occured retrieving data from the server!
+	</div>
+</div>
+```
 
 ##### Loading Directive
 

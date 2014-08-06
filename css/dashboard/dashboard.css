@@ -16,13 +16,10 @@
       font-family: 'Montserrat';
       src: url('../../fonts/montserrat-regular-webfont.svg') format('svg');
     }
+    select {
+      font-family: Arial;
+    }
   }
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  select {
-     font-family: Arial;
-  }
-}
 
 /* Base */
   html {
@@ -44,7 +41,6 @@
   }
   #page-wrapper {
     padding-left: 70px;
-    transition: all .4s ease 0s;
     height: 100%
   }
   #sidebar-wrapper {
@@ -53,7 +49,9 @@
     width: 250px;
     position: fixed;
     height: 100%;
-    transition: all .3s ease 0s;
+  }
+  #page-wrapper, #sidebar-wrapper {
+    transition: all .4s ease 0s;
   }
   .green {
     background: #23ae89 !important;

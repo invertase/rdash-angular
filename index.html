@@ -15,21 +15,21 @@
   <link rel="stylesheet" type="text/css" href="css/themes/red.css">
   -->
 
-  <script type="text/javascript" src="js/angular.min.js"></script>
-  <script type="text/javascript" src="js/angular-cookies.js"></script>
-  <script type="text/javascript" src="js/ng-bootstrap-tpls.min.js"></script>
-  <script type="text/javascript" src="js/angular/bootstrap.js"></script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/jquery.cookie.js"></script>
+  <script type="text/javascript" src="js/jquery/bootstrap.js"></script>
 
 </head>
 <body ng-controller="MasterCtrl">
-  <div id="page-wrapper" ng-class="{'active': toggle}" ng-cloak>
+  <div id="page-wrapper">
 
     <!-- Sidebar -->
 
     <div id="sidebar-wrapper">
       <ul class="sidebar">
-        <li class="sidebar-main">
-          <a href="#" ng-click="toggleSidebar()">
+        <li id="toggle" class="sidebar-main">
+          <a href="#">
             Dashboard
             <span class="menu-icon glyphicon glyphicon-transfer"></span>
           </a>

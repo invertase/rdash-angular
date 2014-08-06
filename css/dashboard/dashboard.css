@@ -67,15 +67,8 @@
   .red {
     background: #ae2323 !important;
   }
-
-  .form-horizontal .has-feedback .fa-form-control-feedback {
-    position: absolute;
-    right: 24px;
-    top: 7px;
-    font-size: 20px;
-  }
-  .form-group .help-block.form-group-inline-error {
-    padding-top: 3px;
+  .form-group .help-block.form-group-inline-message {
+    padding-top: 5px;
   }
   div.input-mask {
     padding-top: 7px;
@@ -299,6 +292,7 @@
     background-color: #f6f6f6;
     padding: 10px 15px;
     border-bottom: 1px solid #e9e9e9;
+    line-height: 30px;
   }
   .widget .widget-title i {
     margin-right: 5px;

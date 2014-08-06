@@ -19,9 +19,9 @@
   }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-	select {
-	   font-family: Arial;
-	}
+  select {
+     font-family: Arial;
+  }
 }
 
 /* Base */
@@ -67,15 +67,8 @@
   .red {
     background: #ae2323 !important;
   }
-
-  .form-horizontal .has-feedback .fa-form-control-feedback {
-    position: absolute;
-    right: 24px;
-    top: 7px;
-    font-size: 20px;
-  }
-  .form-group .help-block.form-group-inline-error {
-    padding-top: 3px;
+  .form-group .help-block.form-group-inline-message {
+    padding-top: 5px;
   }
   div.input-mask {
     padding-top: 7px;
@@ -192,10 +185,8 @@
   #page-wrapper.active #sidebar-wrapper {
     left: 150px;
   }
-  #content-wrapper {
-    width: 100%;
-  }
-  /* Header */
+
+/* Header */
   .row.header {
     height: 60px;
     background: #fff;
@@ -287,11 +278,6 @@
     padding-right: 7px;
   }
 
-  /* Toolbars */
-  .toolbar button {
-    margin-left: 10px;
-  }
-
   /* Widgets */
   .widget {
     background: #ffffff;
@@ -306,6 +292,7 @@
     background-color: #f6f6f6;
     padding: 10px 15px;
     border-bottom: 1px solid #e9e9e9;
+    line-height: 30px;
   }
   .widget .widget-title i {
     margin-right: 5px;
@@ -322,11 +309,10 @@
   .widget .widget-body table tbody * {
     font-size: 13px !important;
   }
-    .widget .widget-body table tbody .roles i {
-    font-size: 17px !important;
+  .widget .widget-body.no-padding .error, .widget .widget-body.no-padding .message {
+    padding: 20px;
   }
   .widget .widget-body .error {
-    padding: 20px;
     color: #ff0000;
   }
   .widget .widget-body table thead {

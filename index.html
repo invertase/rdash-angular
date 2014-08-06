@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en" ng-app="Dashboard">
 <head>
-	<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Dashboard</title>
+  <title>Dashboard</title>
 
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
@@ -207,24 +207,25 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="widget">
-                <div class="widget-title"><i class="fa fa-tasks"></i> Servers</div>
+                <div class="widget-title">
+                  <i class="fa fa-tasks"></i> Servers
+                  <a href="#" class="pull-right">Manage</a>
+                </div>
                 <div class="widget-body medium no-padding">
                   <div class="table-responsive">
                     <table class="table">
                       <tbody>
-                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
-                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
-                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
-                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
-                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
-                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
-                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
-                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
-                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
-                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
-                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
-                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
-                        <tr><td>Server Name</td><td>127.0.0.1:80</td></tr>
+                        <tr><td>RDVMPC001</td><td>238.103.133.37</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>RDVMPC002</td><td>68.66.63.170</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>RDVMPC003</td><td>76.117.212.33</td><td><span tooltip="Server Down!" class="text-danger"><i class="fa fa-warning"></i></span></td></tr>
+                        <tr><td>RDPHPC001</td><td>91.88.224.5</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>RDESX001</td><td>197.188.15.93</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>RDESX002</td><td>168.85.154.251</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>RDESX003</td><td>209.25.191.61</td><td><span tooltip="Server Down!" class="text-danger"><i class="fa fa-warning"></i></span></td></tr>
+                        <tr><td>RDESX004</td><td>252.37.192.235</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>RDTerminal01</td><td>139.71.18.207</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>RDTerminal02</td><td>136.80.122.212</td><td><span tooltip="Could not connect!" class="text-warning"><i class="fa fa-flash"></i></span></td></tr>
+                        <tr><td>RDDomainCont01</td><td>196.80.245.33</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
                       </tbody>
                     </table>
                   </div>
@@ -242,32 +243,12 @@
                   <div class="table-responsive">
                     <table class="table">
                       <thead>
-                        <tr>
-                          <th class="text-center">ID</th>
-                          <th>Username</th>
-                          <th>Role</th>
-                          <th>Account</th>
-                        </tr>
+                        <tr><th class="text-center">ID</th><th>Username</th><th>Role</th><th>Account</th></tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td class="text-center">1</td>
-                          <td>Joe Bloggs</td>
-                          <td>Super Admin</td>
-                          <td>AZ23045</td>
-                        </tr>
-                        <tr>
-                          <td class="text-center">2</td>
-                          <td>Timothy Hernandez</td>
-                          <td>Admin</td>
-                          <td>AU24783</td>
-                        </tr>
-                        <tr>
-                          <td class="text-center">3</td>
-                          <td>Joe Bickham</td>
-                          <td>User</td>
-                          <td>AM23781</td>
-                        </tr>
+                        <tr><td class="text-center">1</td><td>Joe Bloggs</td><td>Super Admin</td><td>AZ23045</td></tr>
+                        <tr><td class="text-center">2</td><td>Timothy Hernandez</td><td>Admin</td><td>AU24783</td></tr>
+                        <tr><td class="text-center">3</td><td>Joe Bickham</td><td>User</td><td>AM23781</td></tr>
                       </tbody>
                     </table>
                   </div>
@@ -279,21 +260,51 @@
             <div class="col-lg-6">
               <div class="widget">
                 <div class="widget-title">
-                  <i class="fa fa-warning"></i> Notifications
-                  <button class="btn btn-sm btn-success pull-right">Clear</button>
+                  <i class="fa fa-plus"></i> Extras
+                  <button class="btn btn-sm btn-info pull-right">Button</button>
                   <div class="clearfix"></div>
                 </div>
                 <div class="widget-body">
-                  <div class="alert alert-success">No reported server issues</div>
-                  <div class="alert alert-info">A new user 'Joe Bickham' joined!</div>
-                  <div class="alert alert-warning">Server 'HAProxyVM2' did not respond on it's last check, warning issued!</div>
-                  <div class="alert alert-danger">Server 'APPPHVM04' has not responded on it's last two checks!</div>
+
+                  <div class="message">
+                    This is a standard message which will also work the ".no-padding" class, I can also <span class="error">be an error message!</span>
+                  </div>
+
+                  <hr />
+
+                  <div class="message">
+                    <a href="http://angular-ui.github.io/bootstrap/" target="_blank">UI Bootstrap</a> is included, so you can use <a href="#" tooltip="I'm a tooltip!">tooltips</a> and all of the other native Bootstrap JS components!
+                  </div>
+
+                  <hr />
+
+                  <form class="form-horizontal" role="form">
+                    <div class="form-group has-feedback has-success">
+                      <label for="label" class="col-sm-2 control-label">Inline Form</label>
+                      <div class="col-sm-5">
+                        <input  type="text" class="form-control" />  
+                          <span class="fa fa-key form-control-feedback"></span>
+                      </div>
+                      <div class="col-sm-5">
+                        <div class="input-mask">I'm an input mask!</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <span class="help-block form-group-inline-message">I'm a properly padded inline message!</span>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+
                 </div>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="widget">
-                <div class="widget-title"><i class="fa fa-cog fa-spin"></i> Loading Directive</div>
+                <div class="widget-title">
+                  <i class="fa fa-cog fa-spin"></i> Loading Directive
+                  <a href="http://tobiasahlin.com/spinkit/" target="_blank" class="pull-right">SpinKit</a>
+                </div>
                 <div class="widget-body">
                   <!-- Check out the Angular Directive inside bootstrap.js! -->
                   <loading></loading>

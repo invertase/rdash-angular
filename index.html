@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="Dashboard">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,14 +14,12 @@
   <link rel="stylesheet" type="text/css" href="css/themes/green.css">
   <link rel="stylesheet" type="text/css" href="css/themes/red.css">
   -->
-
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/jquery.cookie.js"></script>
-  <script type="text/javascript" src="js/jquery/bootstrap.js"></script>
 
 </head>
-<body ng-controller="MasterCtrl">
+<body>
   <div id="page-wrapper">
 
     <!-- Sidebar -->
@@ -87,7 +85,7 @@
             </div>
             <div class="user pull-right">
               <div class="item dropdown">
-                <a href="#" class="dropdown-toggle">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="img/avatar.jpg">
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right">
@@ -119,7 +117,7 @@
                 </ul>               
               </div>
               <div class="item dropdown">
-               <a href="#" class="dropdown-toggle">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="fa fa-bell-o"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right">
@@ -217,14 +215,14 @@
                       <tbody>
                         <tr><td>RDVMPC001</td><td>238.103.133.37</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
                         <tr><td>RDVMPC002</td><td>68.66.63.170</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
-                        <tr><td>RDVMPC003</td><td>76.117.212.33</td><td><span tooltip="Server Down!" class="text-danger"><i class="fa fa-warning"></i></span></td></tr>
+                        <tr><td>RDVMPC003</td><td>76.117.212.33</td><td><span rel="tooltip" data-title="Server Down!" data-placement="top" class="text-danger"><i class="fa fa-warning"></i></span></td></tr>
                         <tr><td>RDPHPC001</td><td>91.88.224.5</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
                         <tr><td>RDESX001</td><td>197.188.15.93</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
                         <tr><td>RDESX002</td><td>168.85.154.251</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
-                        <tr><td>RDESX003</td><td>209.25.191.61</td><td><span tooltip="Server Down!" class="text-danger"><i class="fa fa-warning"></i></span></td></tr>
+                        <tr><td>RDESX003</td><td>209.25.191.61</td><td><span rel="tooltip" data-title="Server Down!" data-placement="top" class="text-danger"><i class="fa fa-warning"></i></span></td></tr>
                         <tr><td>RDESX004</td><td>252.37.192.235</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
                         <tr><td>RDTerminal01</td><td>139.71.18.207</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
-                        <tr><td>RDTerminal02</td><td>136.80.122.212</td><td><span tooltip="Could not connect!" class="text-warning"><i class="fa fa-flash"></i></span></td></tr>
+                        <tr><td>RDTerminal02</td><td>136.80.122.212</td><td><span rel="tooltip" data-title="Could not connect!" data-placement="top" class="text-warning"><i class="fa fa-flash"></i></span></td></tr>
                         <tr><td>RDDomainCont01</td><td>196.80.245.33</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
                       </tbody>
                     </table>
@@ -273,7 +271,7 @@
                   <hr />
 
                   <div class="message">
-                    <a href="http://angular-ui.github.io/bootstrap/" target="_blank">UI Bootstrap</a> is included, so you can use <a href="#" tooltip="I'm a tooltip!">tooltips</a> and all of the other native Bootstrap JS components!
+                    Bootstrap JS is included, so you can use <a href="#" rel="tooltip" data-placement="top" data-title="I'm a tooltip!">tooltips</a> and all of the other Bootstrap JS components!
                   </div>
 
                   <hr />
@@ -302,12 +300,14 @@
             <div class="col-lg-6">
               <div class="widget">
                 <div class="widget-title">
-                  <i class="fa fa-cog fa-spin"></i> Loading Directive
+                  <i class="fa fa-cog fa-spin"></i> Loading Template
                   <a href="http://tobiasahlin.com/spinkit/" target="_blank" class="pull-right">SpinKit</a>
                 </div>
                 <div class="widget-body">
-                  <!-- Check out the Angular Directive inside bootstrap.js! -->
-                  <loading></loading>
+                  <div class="loading">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -318,5 +318,10 @@
       </div><!-- End Page Content -->
     </div><!-- End Content Wrapper -->
   </div><!-- End Page Wrapper -->
+
+  <!-- Script must be loaded after HTML to detect the elements
+        as sidebar activity is done before the document is ready -->
+  <script type="text/javascript" src="js/jquery/bootstrap.js"></script>
+
 </body>
 </html>

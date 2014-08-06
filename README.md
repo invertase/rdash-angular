@@ -1,19 +1,19 @@
-## AngularJS + Bootstrap Responsive Dashboard
+## jQuery + Bootstrap Responsive Dashboard
 
-This dashboard front-end was created as I was lacking a simple responsive but slick looking dashboard for another project of mine.  Other free dashboards were bloated with external plugins and required a lot of hackery out of the box - plus the fact many were powered by jQuery. The design takes inspiration from other dashboards around, but the code to create the layout is my own. Feel free to chop it up as much as you want.
+This dashboard front-end was created as I was lacking a simple responsive but slick looking dashboard for another project of mine.  Other free dashboards were bloated with external plugins and required a lot of hackery out of the box. The design takes inspiration from other dashboards around, but the code to create the layout is my own. Feel free to chop it up as much as you want.
 
-Live Example:
+Live Example (uses Angular JS):
 * http://ehesp.github.io/Responsive-Dashboard/
 
 ### Usage
 
 Simply clone, or download and unzip this repository and access the root via your browser. There is only one page on show (`index.html`), and the relevant sections have been commented.
 
-#### AngularJS
+#### jQuery
 
-AngularJS is simply being used to power the sidebar toggle (side in and out). It does a combination of detecting the browser size and managing a `toggle` cookie to keep the state the same when the page is reloaded. Check out the `js/angular/bootstrap.js` file.
+jQuery is simply being used to power the sidebar toggle (side in and out). It does a combination of detecting the browser size and managing a `toggle` cookie to keep the state the same when the page is reloaded. Check out the `js/jquery/bootstrap.js` file.
 
-This functionality can easily be replaced using jQuery, however this wasn't used in my project.
+Please check the [master branch](https://github.com/Ehesp/Responsive-Dashboard) for the AngularJS implementation of this.
 
 #### Theme
 
@@ -58,7 +58,7 @@ A message can be set within the body whether it has padding or not - simply plac
 
 ```HTML
 <div class="widget-body no-padding">
-	<div class="message" ng-if="servers.length == 0">
+	<div class="message">
 		There are no servers in the application!
 	</div>
 </div>
@@ -68,16 +68,14 @@ If you wish to set this text to red, to display an error for example, simply rep
 
 ```HTML
 <div class="widget-body no-padding">
-	<div class="error" ng-if="error">
+	<div class="error">
 		An error occured retrieving data from the server!
 	</div>
 </div>
 ```
 
-##### Loading Directive
+##### Loading Template
 
-The loading 'spinner' is a simple directive created by AngularJS within the `js/angular/bootstrap.js` file which replaces an HTML element with a define template. In this case, the HTML template is taken from [this awesome spinkit repo](http://tobiasahlin.com/spinkit/), and the CSS placed in the `css/dashboard/loading.css` file (which is imported at the top of the `dashboard.css` file).
-
-Usage of the directive: `<loading></loading>` or `<div loading></div>`
+There's a sample HTML template/snippet used to demonstrate a loading "spinner", which is taken from [this awesome spinkit repo](http://tobiasahlin.com/spinkit/), and the CSS placed in the `css/dashboard/loading.css` file (which is imported at the top of the `dashboard.css` file).
 
 Want to change it, simply replace the template and CSS!

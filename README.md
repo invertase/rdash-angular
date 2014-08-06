@@ -16,7 +16,8 @@ Simply clone, or download and unzip this repository and access the root via your
 AngularJS is simply being used to power the sidebar toggle (side in and out). It does a combination of detecting the browser size and managing a `toggle` cookie to keep the state the same when the page is reloaded. Check out the `js/angular/bootstrap.js` file.
 
 ~~This functionality can easily be replaced using jQuery, however this wasn't used in my project.~~
-jQuery version available [here](https://github.com/Ehesp/Responsive-Dashboard/tree/jquery).
+
+> jQuery version available [here](https://github.com/Ehesp/Responsive-Dashboard/tree/jquery).
 
 #### Theme
 

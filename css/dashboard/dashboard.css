@@ -53,7 +53,7 @@
     width: 250px;
     position: fixed;
     height: 100%;
-    transition: all .3s ease 0s;
+    transition: all .4s ease 0s;
   }
   .green {
     background: #23ae89 !important;

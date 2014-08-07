@@ -12,19 +12,16 @@ function detect()
     {
         if ($.cookie('toggle') === undefined)
         {
-            console.log("undefined");
             $("#page-wrapper").addClass("active");
         }
         else
         {
             if($.cookie('toggle') == 'true')
             {
-                console.log("true");
                 $("#page-wrapper").addClass("active");
             }
             else
             {
-                console.log("false");
                 $("#page-wrapper").removeClass("active");
             }
         }

@@ -29,10 +29,13 @@ app.controller('MasterCtrl', function($scope, $cookieStore) {
             if(angular.isDefined($cookieStore.get('toggle')))
             {
                 if($cookieStore.get('toggle') == false)
+                {
                     $scope.toggle = false;
-
+                }            
                 else
+                {
                     $scope.toggle = true;
+                }
             }
             else 
             {

@@ -179,12 +179,12 @@
     width: 100%;
     height: auto;
   }
-  @media only screen and (min-width:361px){
+  @media only screen and (min-width:561px){
     #page-wrapper.active {
       padding-left: 250px;
     }
   }
-  @media only screen and (max-width:360px){
+  @media only screen and (max-width:560px){
     #page-wrapper.active {
       padding-left: 70px;
     }

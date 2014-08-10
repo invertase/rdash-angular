@@ -78,7 +78,7 @@
   ul.sidebar {
     position: absolute;
     top: 0;
-    bottom: 45px;
+    bottom: 0;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -86,8 +86,10 @@
     overflow-x: hidden;
     overflow-y: auto;
   }
-  #page-wrapper:not(.active) ul.sidebar {
-    bottom: 0;
+  @media only screen and (min-width:992px){
+    #page-wrapper.expandable ul.sidebar {
+      bottom: 45px;
+    }
   }
   ul.sidebar li a {
     color: #fff;
@@ -114,14 +116,25 @@
     height: 35px;
     line-height: 40px;
     text-transform: uppercase;
-  }
-  #page-wrapper:not(.active) ul.sidebar .sidebar-title {
     display: none;
   }
-  #page-wrapper:not(.active) ul.sidebar .sidebar-title.separator {
+  @media only screen and (min-width:992px){
+    #page-wrapper.expandable ul.sidebar .sidebar-title {
+      display: block;
+    }
+  }
+  #page-wrapper ul.sidebar .sidebar-title.separator {
     display: block;
     height: 2px;
     margin: 13px 0;
+  }
+  @media only screen and (min-width:992px){
+    #page-wrapper.expandable ul.sidebar .sidebar-title.separator {
+      display: block;
+      height: auto;
+      margin: initial;
+      background: initial;
+    }
   }
   ul.sidebar .sidebar-list {
     height: 40px;
@@ -137,9 +150,15 @@
     border-left: 3px solid #e99d1a;
     text-indent: 22px;
   }
-  #page-wrapper:not(.active) ul.sidebar .sidebar-list a:hover span {
+  #page-wrapper ul.sidebar .sidebar-list a:hover span {
     border-left: 3px solid #e99d1a;
     text-indent: 22px;
+  }
+  @media only screen and (min-width:992px){
+    #page-wrapper.expandable ul.sidebar .sidebar-list a:hover span {
+      border-left: none;
+      text-indent: 25px;
+    }
   }
   ul.sidebar .sidebar-list .menu-icon {
     float: right;
@@ -158,9 +177,12 @@
     padding: 0;
     margin: 0;
     text-align: center;
-  }
-  #page-wrapper:not(.active) .sidebar-footer {
     display: none;
+  }
+  @media only screen and (min-width:992px){
+    #page-wrapper.expandable .sidebar-footer {
+      display: initial;
+    }
   }
   .sidebar-footer div a {
     color: #b2bfdc;
@@ -180,17 +202,19 @@
     height: auto;
   }
   @media only screen and (min-width:561px){
-    #page-wrapper.active {
+    #page-wrapper.expandable {
       padding-left: 250px;
     }
   }
-  @media only screen and (max-width:560px){
-    #page-wrapper.active {
+  @media only screen and (max-width:560px) and (min-width:992px){
+    #page-wrapper.expandable {
       padding-left: 70px;
     }
   }
-  #page-wrapper.active #sidebar-wrapper {
-    left: 150px;
+  @media only screen and (min-width:992px){
+    #page-wrapper.expandable #sidebar-wrapper {
+      left: 150px;
+    }
   }
 
 /* Header */

@@ -22,14 +22,14 @@
 
 </head>
 <body ng-controller="MasterCtrl">
-  <div id="page-wrapper" ng-class="{'active': toggle}" ng-cloak>
+  <div id="page-wrapper" ng-class="{'expandable': expandableSideBar}" ng-cloak>
 
     <!-- Sidebar -->
 
     <div id="sidebar-wrapper">
       <ul class="sidebar">
         <li class="sidebar-main">
-          <a href="#" ng-click="toggleSidebar()">
+          <a href="#" ng-click="toggleExpandableSideBar()">
             Dashboard
             <span class="menu-icon glyphicon glyphicon-transfer"></span>
           </a>

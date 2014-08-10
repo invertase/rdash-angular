@@ -50,6 +50,7 @@
     width: 250px;
     position: fixed;
     height: 100%;
+    z-index: 999;
   }
   #page-wrapper, #sidebar-wrapper {
     transition: all .4s ease 0s;
@@ -178,8 +179,15 @@
     width: 100%;
     height: auto;
   }
-  #page-wrapper.active {
-    padding-left: 250px;
+  @media only screen and (min-width:561px){
+    #page-wrapper.active {
+      padding-left: 250px;
+    }
+  }
+  @media only screen and (max-width:560px){
+    #page-wrapper.active {
+      padding-left: 70px;
+    }
   }
   #page-wrapper.active #sidebar-wrapper {
     left: 150px;
@@ -355,7 +363,4 @@
   .widget .widget-content .title {
     font-size: 28px;
     display: block;
-  }
-  .message-heading {
-    font-size: 17px !important;
   }

@@ -2,6 +2,12 @@
 
 This dashboard front-end was created as I was lacking a simple responsive but slick looking dashboard for another project of mine.  Other free dashboards were bloated with external plugins and required a lot of hackery out of the box. The design takes inspiration from other dashboards around, but the code to create the layout is my own. Feel free to chop it up as much as you want.
 
+Compatibility/Tested:
+* Chrome, Firefox, IE 11+
+* Works best on screen sizes greater than ~335px
+
+[Responsive Screenshots](http://ami.responsivedesign.is/?url=http://ehesp.github.io/Responsive-Dashboard/)
+
 Live Example (uses Angular JS):
 * http://ehesp.github.io/Responsive-Dashboard/
 
@@ -12,6 +18,8 @@ Simply clone, or download and unzip this repository and access the root via your
 #### jQuery
 
 jQuery is simply being used to power the sidebar toggle (side in and out). It does a combination of detecting the browser size and managing a `toggle` cookie to keep the state the same when the page is reloaded. Check out the `js/jquery/bootstrap.js` file.
+
+The idea is not for jQuery to be used just to power this functionality, it's used to be compatible with your jQuery project.
 
 Please check the [master branch](https://github.com/Ehesp/Responsive-Dashboard) for the AngularJS implementation of this.
 
@@ -36,7 +44,7 @@ A widget is essentially a white container box with some styling, that will expan
 	<div class="widget">
 ```
 
-A widget has a `widget-title` (title area) and also a `widget-body` (main content) which can be used individually inside the widget.
+A widget has a `widget-title` and also a `widget-body` which can be used individually inside the widget.
 
 Any content can be inside a `widget-body`, which will be padded by default. Three set sizes for the body are available and will provide a scroller for the content when the content breaks the height. Apply either `large` `medium` or `small` to the `widget-body` class, e.g: `<div class="widget-body medium">`.
 

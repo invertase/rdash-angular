@@ -1,7 +1,7 @@
 ul.sidebar .sidebar-main a,
 .sidebar-footer, 
 ul.sidebar .sidebar-list a:hover,
-#page-wrapper:not(.active) ul.sidebar .sidebar-title.separator {
+#page-wrapper ul.sidebar .sidebar-title.separator {
 	/* Sidebar header and footer color */
 	background: #592727;
 }

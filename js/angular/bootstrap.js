@@ -12,6 +12,9 @@ app.directive('loading', function () {
     }
 });
 
+/**
+ * Master Controller
+ */
 app.controller('MasterCtrl', function($scope, $cookieStore) {
 
     /**
@@ -59,11 +62,13 @@ app.controller('MasterCtrl', function($scope, $cookieStore) {
     window.onresize = function() { $scope.$apply(); };
 });
 
-// The alerts controller.
+/**
+ * Alerts Controller
+ */
 app.controller('AlertsCtrl', function($scope) {
     $scope.alerts = [
-        { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' },
-        { type: 'success', msg: 'Well done! You successfully read this important alert message.' }
+        { type: 'success', msg: 'Thanks for visiting! Feel free to create pull requests to improve the dashboard!' },
+        { type: 'danger', msg: 'Found a bug? Create an issue with as many details as you can.' }
     ];
 
     $scope.addAlert = function() {

@@ -139,9 +139,9 @@
         <!-- End Header Bar -->
 
         <!-- Main Content -->
-        <div class="row">
+        <div class="row alerts-container" data-ng-controller="AlertsCtrl" data-ng-show="alerts.length">
           <div class="col-xs-12">
-            <div class="alert alert-success">Thanks for visiting! Feel free to create pull requests to improve the dashboard!</div>
+            <alert data-ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
           </div>
         </div>
 

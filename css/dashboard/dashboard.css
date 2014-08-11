@@ -37,8 +37,8 @@
   .row > div {
     margin-bottom: 15px;
   }
-  .alert {
-    margin-bottom: 0;
+  .alerts-container .alert:last-child {
+    margin-bottom: 0px;
   }
   #page-wrapper {
     padding-left: 70px;

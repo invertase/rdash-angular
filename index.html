@@ -6,20 +6,14 @@
 
 	<title>Dashboard</title>
 
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="css/dashboard/dashboard.css">
   <link rel="stylesheet" type="text/css" href="css/themes/blue.css">
   <!--
   <link rel="stylesheet" type="text/css" href="css/themes/green.css">
   <link rel="stylesheet" type="text/css" href="css/themes/red.css">
   -->
-
-  <script type="text/javascript" src="js/angular.min.js"></script>
-  <script type="text/javascript" src="js/angular-cookies.js"></script>
-  <script type="text/javascript" src="js/ng-bootstrap-tpls.min.js"></script>
-  <script type="text/javascript" src="js/angular/bootstrap.js"></script>
-
 </head>
 <body ng-controller="MasterCtrl">
   <div id="page-wrapper" ng-class="{'active': toggle}" ng-cloak>
@@ -318,5 +312,17 @@
       </div><!-- End Page Content -->
     </div><!-- End Content Wrapper -->
   </div><!-- End Page Wrapper -->
+
+  <!-- SCRIPTS -->
+  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+  <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+  <!-- Rename me ? Maybe ? js/app.js ? -->
+  <script type="text/javascript" src="js/angular/bootstrap.js"></script>
+  <!-- SCRIPTS -->
+
+
 </body>
 </html>

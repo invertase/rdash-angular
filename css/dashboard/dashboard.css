@@ -37,7 +37,7 @@
   .row > div {
     margin-bottom: 15px;
   }
-  .alerts-container .alert:last-child {
+  .alert, .alerts-container .alert:last-child {
     margin-bottom: 0px;
   }
   #page-wrapper {

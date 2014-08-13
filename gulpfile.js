@@ -1,40 +1,44 @@
 var gulp      = require('gulp'), 
-  less      = require('gulp-less');
+  less      = require('gulp-less'),
+  usemin 		= require('gulp-usemin');
 
 var paths = {
   js: 'src/js/**/*.*',
-  fonts: 'src/fonts/**/*.*',
+  fonts: 'src/fonts/**.*',
   images: 'src/img/**/*.*',
   styles: 'src/less/**/*.less',
   index: 'src/index.html',
+  bower_fonts: 'src/bower_components/**/*.{ttf,woff,eof,svg}',
   bower_components: 'src/bower_components/**/*.*'
 };
 
 
+gulp.task('usemin', function() {
+  return gulp.src(paths.index)
+    .pipe(usemin({
+      less: [less(), 'concat']
+    }))
+    .pipe(gulp.dest('dist/'));
+});
+
 /**
  * Copy assets
  */
-gulp.task('copy-assets', ['copy-index', 'copy-fonts', 'copy-images', 'copy-bower_components', 'copy-js']);
+gulp.task('copy-assets', ['copy-images', 'copy-fonts', 'copy-bower_fonts']);
 
-gulp.task('copy-index', function(){
-  return gulp.src(paths.index)
-    .pipe(gulp.dest('dist'));
-});
-gulp.task('copy-fonts', function(){
-  return gulp.src(paths.fonts)
-    .pipe(gulp.dest('dist/fonts'));
-});
 gulp.task('copy-images', function(){
   return gulp.src(paths.images)
     .pipe(gulp.dest('dist/img'));
 });
-gulp.task('copy-bower_components', function(){
-  return gulp.src(paths.bower_components)
-    .pipe(gulp.dest('dist/lib'));
+
+gulp.task('copy-fonts', function(){
+  return gulp.src(paths.fonts)
+    .pipe(gulp.dest('dist/fonts'));
 });
-gulp.task('copy-js', function(){
-  return gulp.src(paths.js)
-    .pipe(gulp.dest('dist/js'));
+
+gulp.task('copy-bower_fonts', function(){
+  return gulp.src(paths.bower_fonts)
+    .pipe(gulp.dest('dist/lib'));
 });
 
 /**
@@ -46,4 +50,4 @@ gulp.task('compile-less', function(){
       .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('default', ['compile-less', 'copy-assets']);
+gulp.task('build', ['usemin', 'copy-assets']);

@@ -2,18 +2,18 @@ var gulp      = require('gulp');
 var less      = require('gulp-less');
 
 /**
- * Compile dashboard
+ * Compile less
  */
-gulp.task('compile-dashboard', function(){
-    return gulp.src('less/dashboard.less')
+gulp.task('compile-less', function(){
+    return gulp.src('src/less/**/*.less')
         .pipe(less())
-        .pipe(gulp.dest('css/dashboard'));
+        .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('default', function() {
-    gulp.run('compile-dashboard');
+    gulp.run('compile-less');
 
-    gulp.watch('less/dashboard/**/*.less', function() {
-        gulp.run('compile-dashboard');
+    gulp.watch('src/less/**/*.less', function() {
+        gulp.run('compile-less');
     });
 });

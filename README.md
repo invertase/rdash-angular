@@ -1,6 +1,6 @@
 ## jQuery + Bootstrap Responsive Dashboard
 
-This dashboard front-end was created as I was lacking a simple responsive but slick looking dashboard for another project of mine.  Other free dashboards were bloated with external plugins and required a lot of hackery out of the box. The design takes inspiration from other dashboards around, but the code to create the layout is my own. Feel free to chop it up as much as you want.
+This dashboard front-end was created as I was lacking a simple responsive but slick looking dashboard for another project of mine.  Other available dashboards were bloated with external plugins and required a lot of hackery/work out of the box - plus the fact many were powered by jQuery. The design takes inspiration from other dashboards around, but the code to create the layout is my own.
 
 Compatibility/Tested:
 * Chrome, Firefox, IE 11+
@@ -11,9 +11,20 @@ Compatibility/Tested:
 Live Example (uses Angular JS):
 * http://ehesp.github.io/Responsive-Dashboard/
 
+> jQuery version available on the [jQuery branch](https://github.com/Ehesp/Responsive-Dashboard/tree/jquery)!
+
 ### Usage
 
 Simply clone, or download and unzip this repository and access the root via your browser. There is only one page on show (`index.html`), and the relevant sections have been commented.
+
+If you want to use LESS, then cd into the root directory and
+
+```
+npm install
+
+```
+
+After that, run `gulp` in order to compile the LESS files into CSS.
 
 #### jQuery
 
@@ -37,7 +48,7 @@ The `css/dashboard/dashboard.min.css` file is the base CSS file for the dashboar
 
 ##### Widgets
 
-A widget is essentially a white container box with some styling, that will expand 100% of it's parent container. To seperate these out, I suggest putting them inside a bootstrap grid item, e.g:
+A widget is essentially a white container box with some styling, that will expand 100% of it's parent container. To separate these out, I suggest putting them inside a bootstrap grid item, e.g:
 
 ```HTML
 <div class="col-lg-3">
@@ -86,4 +97,4 @@ If you wish to set this text to red, to display an error for example, simply rep
 
 There's a sample HTML template/snippet used to demonstrate a loading "spinner", which is taken from [this awesome spinkit repo](http://tobiasahlin.com/spinkit/), and the CSS placed in the `css/dashboard/loading.css` file (which is imported at the top of the `dashboard.css` file).
 
-Want to change it, simply replace the template and CSS!
+If you want to change it, simply replace the template and CSS!

@@ -17,6 +17,15 @@ Live Example:
 
 Simply clone, or download and unzip this repository and access the root via your browser. There is only one page on show (`index.html`), and the relevant sections have been commented.
 
+If you want to use LESS, then cd into the root directory and
+
+```
+npm install
+
+```
+
+After that, run `gulp` in order to compile the LESS files into CSS.
+
 #### AngularJS
 
 AngularJS is simply being used to power the sidebar toggle (side in and out). It does a combination of detecting the browser size and managing a `toggle` cookie to keep the state the same when the page is reloaded. Check out the `js/angular/bootstrap.js` file.
@@ -37,7 +46,7 @@ The `css/dashboard/dashboard.min.css` file is the base CSS file for the dashboar
 
 ##### Widgets
 
-A widget is essentially a white container box with some styling, that will expand 100% of it's parent container. To seperate these out, I suggest putting them inside a bootstrap grid item, e.g:
+A widget is essentially a white container box with some styling, that will expand 100% of it's parent container. To separate these out, I suggest putting them inside a bootstrap grid item, e.g:
 
 ```HTML
 <div class="col-lg-3">
@@ -77,7 +86,7 @@ If you wish to set this text to red, to display an error for example, simply rep
 ```HTML
 <div class="widget-body no-padding">
 	<div class="error" ng-if="error">
-		An error occured retrieving data from the server!
+		An error occurred retrieving data from the server!
 	</div>
 </div>
 ```
@@ -88,4 +97,4 @@ The loading 'spinner' is a simple directive created by AngularJS within the `js/
 
 Usage of the directive: `<loading></loading>` or `<div loading></div>`
 
-Want to change it, simply replace the template and CSS!
+If you want to change it, simply replace the template and CSS!

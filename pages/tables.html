@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en" ng-app="Dashboard">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard | Tables</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/dashboard/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="/css/themes/blue.css">
+    <!--
+    <link rel="stylesheet" type="text/css" href="css/themes/green.css">
+    <link rel="stylesheet" type="text/css" href="css/themes/red.css">
+    -->
+
+    <script type="text/javascript" src="/js/angular.min.js"></script>
+    <script type="text/javascript" src="/js/angular-cookies.js"></script>
+    <script type="text/javascript" src="/js/ng-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="/js/angular/bootstrap.js"></script>
+</head>
+<body ng-controller="MasterCtrl">
+    <div id="page-wrapper" ng-class="{'active': toggle}" ng-cloak>
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar">
+                <li class="sidebar-main">
+                    <a href="#" ng-click="toggleSidebar()">
+                        Dashboard
+                        <span class="menu-icon glyphicon glyphicon-transfer"></span>
+                    </a>
+                </li>
+                <li class="sidebar-title"><span>NAVIGATION</span></li>
+                <li class="sidebar-list">
+                    <a href="#">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
+                </li>
+                <li class="sidebar-list">
+                    <a href="#">Servers <span class="menu-icon fa fa-tasks"></span></a>
+                </li>
+                <li class="sidebar-list">
+                    <a href="#">Settings <span class="menu-icon fa fa-cogs"></span></a>
+                </li>
+                <li class="sidebar-title separator"><span>QUICK LINKS</span></li>
+                <li class="sidebar-list">
+                    <a href="#" target="_blank">Forums <span class="menu-icon fa fa-external-link"></span></a>
+                </li>
+                <li class="sidebar-title separator"><span>COMPONENTS</span></li>
+                <li class="sidebar-list">
+                  <a href="tables.html">Tables <span class="menu-icon fa fa-table"></span></a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="col-xs-4">
+                    <a href="https://github.com/Ehesp/Responsive-Dashboard" target="_blank">
+                        Github
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#" target="_blank">
+                        About
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#">
+                        Support
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- End Sidebar -->
+        <div id="content-wrapper">
+            <div class="page-content">
+
+                <!-- Header Bar -->
+                <div class="row header">
+                    <div class="col-xs-12">
+                        <div class="meta pull-left">
+                            <div class="page">
+                                Dashboard
+                            </div>
+                            <div class="breadcrumb-links">
+                                Home / Tables
+                            </div>
+                        </div>
+                        <div class="user pull-right">
+                            <div class="item dropdown">
+                                <a href="#" class="dropdown-toggle">
+                                    <img src="/img/avatar.jpg">
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li class="dropdown-header">
+                                        Joe Bloggs
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="link">
+                                        <a href="#">
+                                            Profile
+                                        </a>
+                                    </li>
+                                    <li class="link">
+                                        <a href="#">
+                                            Menu Item
+                                        </a>
+                                    </li>
+                                    <li class="link">
+                                        <a href="#">
+                                            Menu Item
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="link">
+                                        <a href="#">
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item dropdown">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="fa fa-bell-o"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li class="dropdown-header">
+                                        Notifications
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#">Server Down!</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- End Header Bar -->
+
+                <!-- Main Content -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="widget">
+                            <div class="widget-title">
+                                <i class="fa fa-users"></i> Users
+                                <input type="text" placeholder="Search" class="form-control input-sm pull-right" />
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="widget-body no-padding">
+                                <div class="table-responsive">
+                                  <table class="table">
+                                    <thead>
+                                      <tr><th class="text-center">ID</th><th>Username</th><th>Role</th><th>Account</th></tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr><td class="text-center">1</td><td>Joe Bloggs</td><td>Super Admin</td><td>AZ23045</td></tr>
+                                      <tr><td class="text-center">2</td><td>Timothy Hernandez</td><td>Admin</td><td>AU24783</td></tr>
+                                      <tr><td class="text-center">3</td><td>Joe Bickham</td><td>User</td><td>AM23781</td></tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                            </div>
+                            <div class="widget-footer clearfix">
+                                <ul class="pagination pagination-sm pull-right">
+                                  <li><a href="#">&laquo;</a></li>
+                                  <li><a href="#">1</a></li>
+                                  <li><a href="#">2</a></li>
+                                  <li><a href="#">3</a></li>
+                                  <li><a href="#">4</a></li>
+                                  <li><a href="#">5</a></li>
+                                  <li><a href="#">&raquo;</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="widget">
+                            <div class="widget-title">
+                                <i class="fa fa-users"></i> Users
+                            </div>
+                            <div class="widget-body no-padding">
+                                <div class="table-responsive">
+                                  <table class="table">
+                                    <thead>
+                                      <tr><th class="text-center">ID</th><th>Username</th><th>Status</th><th>Account</th></tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr><td class="text-center">1</td><td>Joe Bloggs</td><td><span class="label label-default">Default</span></td><td>AZ23045</td></tr>
+                                      <tr><td class="text-center">2</td><td>Timothy Hernandez</td><td><span class="label label-success">Default</span></td><td>AU24783</td></tr>
+                                      <tr><td class="text-center">3</td><td>Joe Bickham</td><td><span class="label label-danger">Default</span></td><td>AM23781</td></tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="widget">
+                            <div class="widget-title">
+                                <i class="fa fa-users"></i> Users
+                                <ul class="pagination pagination-sm pull-right">
+                                  <li><a href="#">&laquo;</a></li>
+                                  <li><a href="#">1</a></li>
+                                  <li><a href="#">2</a></li>
+                                  <li><a href="#">3</a></li>
+                                  <li><a href="#">4</a></li>
+                                  <li><a href="#">5</a></li>
+                                  <li><a href="#">&raquo;</a></li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="widget-body no-padding">
+                                <div class="table-responsive">
+                                  <table class="table">
+                                    <thead>
+                                      <tr><th class="text-center">ID</th><th>Username</th><th>Role</th><th>Account</th></tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr><td class="text-center">1</td><td>Joe Bloggs</td><td>Super Admin</td><td>AZ23045</td></tr>
+                                      <tr><td class="text-center">2</td><td>Timothy Hernandez</td><td>Admin</td><td>AU24783</td></tr>
+                                      <tr><td class="text-center">3</td><td>Joe Bickham</td><td>User</td><td>AM23781</td></tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- End Main Content -->
+            </div><!-- End Page Content -->
+        </div><!-- End Content Wrapper -->
+    </div><!-- End Page Wrapper -->
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "Responsive-Dashboard",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Ehesp/Responsive-Dashboard",
+  "authors": [
+    "Elliot Hesp <elliot.hesp@gmail.com>",
+    "Ricardo Pascua Jr <rdpascua@outlook.com>",
+    "Leonel Samayoa <leonel.e.samayoa@gmail.com>"
+  ],
+  "description": "jQuery + Bootstrap Responsive Dashboard",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.9.0",
+    "jquery.cookie": "~1.4.1",
+    "bootstrap": "~3.2.0",
+    "font-awesome": "~4.1.0"
+  }
+}

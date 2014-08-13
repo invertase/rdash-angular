@@ -12,6 +12,15 @@
 
   <link rel="stylesheet" href="css/dashboard/dashboard.css"/>
 
+  <!-- SCRIPTS -->
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-cookies/angular-cookies.js"></script>
+  <script src="lib/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+  <script src="js/dashboard.js"></script>
+  <!-- SCRIPTS -->
+
 </head>
 <body ng-controller="MasterCtrl">
   <div id="page-wrapper" ng-class="{'active': toggle}" ng-cloak>
@@ -299,7 +308,7 @@
                 </div>
                 <div class="widget-body">
                   <!-- Check out the Angular Directive inside bootstrap.js! -->
-                  <loading></loading>
+                  <rd-loading></loading>
                 </div>
               </div>
             </div>
@@ -310,18 +319,5 @@
       </div><!-- End Page Content -->
     </div><!-- End Content Wrapper -->
   </div><!-- End Page Wrapper -->
-
-  <!-- SCRIPTS -->
-
-  <script src="lib/angular/angular.js"></script>
-  <script src="lib/angular-cookies/angular-cookies.js"></script>
-  <script src="lib/angular-bootstrap/ui-bootstrap.js"></script>
-  <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-
-  <script src="js/dashboard.js"></script>
-
-  <!-- SCRIPTS -->
-
-
 </body>
 </html>

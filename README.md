@@ -8,12 +8,6 @@ Compatibility/Tested:
 
 [Responsive Screenshots](http://ami.responsivedesign.is/?url=http://ehesp.github.io/Responsive-Dashboard/)
 
-Compatibility/Tested:
-* Chrome, Firefox, IE 11+
-* Works best on screen sizes greater than ~335px
-
-[Responsive Screenshots](http://ami.responsivedesign.is/?url=http://ehesp.github.io/Responsive-Dashboard/)
-
 Live Example (uses Angular JS):
 * http://ehesp.github.io/Responsive-Dashboard/
 
@@ -33,7 +27,6 @@ npm install
 After that, run `gulp` in order to compile the LESS files into CSS.
 
 #### jQuery
-=======
 
 jQuery is simply being used to power the sidebar toggle (side in and out). It does a combination of detecting the browser size and managing a `toggle` cookie to keep the state the same when the page is reloaded. Check out the `js/jquery/bootstrap.js` file.
 

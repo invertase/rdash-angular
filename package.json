@@ -4,6 +4,8 @@
   "author": "Elliot Hesp",
   "devDependencies": {
     "gulp-less": "~1.3.3",
-    "gulp": "~3.8.0"
+    "gulp": "~3.8.0",
+    "gulp-minify-css": "^0.3.7",
+    "gulp-rename": "~1.2.0"
   }
 }

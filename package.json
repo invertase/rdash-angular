@@ -2,6 +2,7 @@
   "name": "Responsive-Dashboard",
   "version": "0.1.0",
   "author": "Elliot Hesp",
+  "contributors": ["Leonel Samayoa <leonel.e.samayoa@gmail.com> (http://gobliip.com)"],
   "devDependencies": {
     "gulp-less": "~1.3.3",
     "gulp": "~3.8.0",

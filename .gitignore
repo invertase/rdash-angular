@@ -40,4 +40,4 @@ Icon
 /node_modules
 
 # Bower components
-/bower_components
+/src/bower_components

@@ -23,6 +23,28 @@
   <link rel="stylesheet" type="text/css" href="less/dashboard/widgets.less">
   <!-- endbuild -->
 
+  <!-- SCRIPTS -->
+  <!-- build:js lib/angular/angular.js -->
+  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+  <!-- endbuild -->
+  <!-- build:js lib/angular-cookies/angular-cookies.js -->
+  <script type="text/javascript" src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <!-- endbuild -->
+  <!-- build:js lib/angular-bootstrap/ui-bootstrap.js -->
+  <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+  <!-- endbuild -->
+  <!-- build:js lib/angular-bootstrap/ui-bootstrap-tpls.js -->
+  <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js js/dashboard.js -->
+  <script type="text/javascript" src="js/dashboard/module.js"></script>
+  <script type="text/javascript" src="js/dashboard/controllers/master-ctrl.js"></script>
+  <script type="text/javascript" src="js/dashboard/controllers/alerts-ctrl.js"></script>
+  <script type="text/javascript" src="js/dashboard/directives/loading.js"></script>
+  <!-- endbuild -->
+  <!-- SCRIPTS -->
+
 </head>
 <body ng-controller="MasterCtrl">
   <div id="page-wrapper" ng-class="{'active': toggle}" ng-cloak>
@@ -321,31 +343,5 @@
       </div><!-- End Page Content -->
     </div><!-- End Content Wrapper -->
   </div><!-- End Page Wrapper -->
-
-  <!-- SCRIPTS -->
-
-  <!-- build:js lib/angular/angular.js -->
-  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-  <!-- endbuild -->
-  <!-- build:js lib/angular-cookies/angular-cookies.js -->
-  <script type="text/javascript" src="bower_components/angular-cookies/angular-cookies.js"></script>
-  <!-- endbuild -->
-  <!-- build:js lib/angular-bootstrap/ui-bootstrap.js -->
-  <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
-  <!-- endbuild -->
-  <!-- build:js lib/angular-bootstrap/ui-bootstrap-tpls.js -->
-  <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-  <!-- endbuild -->
-
-  <!-- build:js js/dashboard.js -->
-  <script type="text/javascript" src="js/dashboard/module.js"></script>
-  <script type="text/javascript" src="js/dashboard/controllers/master-ctrl.js"></script>
-  <script type="text/javascript" src="js/dashboard/controllers/alerts-ctrl.js"></script>
-  <script type="text/javascript" src="js/dashboard/directives/loading.js"></script>
-  <!-- endbuild -->
-
-  <!-- SCRIPTS -->
-
-
 </body>
 </html>

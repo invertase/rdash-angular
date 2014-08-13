@@ -1,4 +1,27 @@
-var app = angular.module('Dashboard', ['ui.bootstrap', 'ngCookies']);
+'use strict';
+
+var app = angular.module('Dashboard', ['ui.router', 'ui.bootstrap', 'ngCookies']);
+
+/**
+ * Route configuration
+ */
+app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', 
+    function($stateProvider, $urlRouterProvider, $httpProvider) {
+
+    // For unmatched routes
+    $urlRouterProvider.otherwise('/');
+
+    // Application routes
+    $stateProvider
+        .state('index', {
+            url: '/',
+            templateUrl: 'dashboard.html'
+        })
+        .state('tables', {
+            url: '/tables', 
+            templateUrl: 'tables.html'
+        });
+}]);
 
 /**
  * Loading Directive

@@ -1,6 +1,30 @@
 /**
  * Sidebar
  */
+ /* #592727 RED */
+ /* #2f5927 GREEN */
+ /* #30426a BLUE (default)*/
+
+/* Sidebar background color */
+ @sidebarBaseColor: #592727;
+ /* Sidebar header and footer color */
+ @sidebarHeaderColor: darken(@sidebarBaseColor, 2%);
+ /* Sidebar title text colour */
+ @sidebarTitleColor:  lighten(@sidebarBaseColor, 30%); /*#627cb7*/
+
+
+#sidebar-wrapper {
+    background: @sidebarBaseColor;
+}
+
+ul.sidebar .sidebar-main a,
+.sidebar-footer,
+ul.sidebar .sidebar-list a:hover,
+#page-wrapper:not(.active) ul.sidebar .sidebar-title.separator {
+    /* Sidebar header and footer color */
+    background: @sidebarHeaderColor;
+}
+
 ul.sidebar {
     position: absolute;
     top: 0;
@@ -55,6 +79,7 @@ ul.sidebar {
         }
     }
     .sidebar-title {
+        color: @sidebarTitleColor;
         font-size: 12px;
         height: 35px;
         line-height: 40px;

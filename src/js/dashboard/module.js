@@ -1,3 +1,1 @@
-(function () {  
-    angular.module('Dashboard', ['ui.bootstrap', 'ngCookies']);
-})();
+angular.module('Dashboard', ['ui.bootstrap', 'ngCookies']);

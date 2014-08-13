@@ -1,6 +1,7 @@
 var gulp      = require('gulp'), 
   less      = require('gulp-less'),
-  usemin 		= require('gulp-usemin');
+  usemin 		= require('gulp-usemin'),
+  wrap = require('gulp-wrap');
 
 var paths = {
   js: 'src/js/**/*.*',
@@ -16,7 +17,8 @@ var paths = {
 gulp.task('usemin', function() {
   return gulp.src(paths.index)
     .pipe(usemin({
-      less: [less(), 'concat']
+      less: [less(), 'concat'],
+      js: ['concat', wrap('(function(){ \n<%= contents %>\n})();')],
     }))
     .pipe(gulp.dest('dist/'));
 });

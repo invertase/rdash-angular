@@ -11,7 +11,6 @@ gulp.task('compile-dashboard', function(){
 });
 
 gulp.task('watch', function() {
-  console.log('changed');
   gulp.watch('./less/**/*.less', ['compile-dashboard']);
 });
 

@@ -1,19 +1,56 @@
-var gulp      = require('gulp');
-var less      = require('gulp-less');
+var gulp    = require('gulp'),
+  less      = require('gulp-less'),
+  usemin    = require('gulp-usemin'),
+  wrap      = require('gulp-wrap');
+
+var paths = {
+  js: 'src/js/**/*.*',
+  fonts: 'src/fonts/**.*',
+  images: 'src/img/**/*.*',
+  styles: 'src/less/**/*.less',
+  index: 'src/index.html',
+  bower_fonts: 'src/bower_components/**/*.{ttf,woff,eof,svg}',
+  bower_components: 'src/bower_components/**/*.*'
+};
+
+
+gulp.task('usemin', function() {
+  return gulp.src(paths.index)
+    .pipe(usemin({
+      less: [less(), 'concat'],
+      js: ['concat', wrap('(function(){ \n<%= contents %>\n})();')],
+    }))
+    .pipe(gulp.dest('dist/'));
+});
 
 /**
- * Compile dashboard
+ * Copy assets
  */
-gulp.task('compile-dashboard', function(){
-    return gulp.src('less/dashboard.less')
-        .pipe(less())
-        .pipe(gulp.dest('css/dashboard'));
+gulp.task('copy-assets', ['copy-images', 'copy-fonts', 'copy-bower_fonts']);
+
+gulp.task('copy-images', function(){
+  return gulp.src(paths.images)
+    .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('default', function() {
-    gulp.run('compile-dashboard');
-
-    gulp.watch('less/dashboard/**/*.less', function() {
-        gulp.run('compile-dashboard');
-    });
+gulp.task('copy-fonts', function(){
+  return gulp.src(paths.fonts)
+    .pipe(gulp.dest('dist/fonts'));
 });
+
+gulp.task('copy-bower_fonts', function(){
+  return gulp.src(paths.bower_fonts)
+    .pipe(gulp.dest('dist/lib'));
+});
+
+/**
+ * Compile less
+ */
+gulp.task('compile-less', function(){
+  return gulp.src(paths.styles)
+      .pipe(less())
+      .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('build', ['usemin', 'copy-assets']);
+gulp.task('default', ['build']);

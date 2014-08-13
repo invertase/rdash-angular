@@ -38,3 +38,6 @@ Icon
 
 # Node modules
 /node_modules
+
+# Bower components
+/src/bower_components

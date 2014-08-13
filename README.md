@@ -17,6 +17,15 @@ Live Example:
 
 Simply clone, or download and unzip this repository and access the root via your browser. There is only one page on show (`index.html`), and the relevant sections have been commented.
 
+If you want to use LESS, then cd into the root directory and
+
+```
+npm install
+
+```
+
+After that, run `gulp` in order to compile the LESS files into CSS.
+
 #### AngularJS
 
 AngularJS is simply being used to power the sidebar toggle (side in and out). It does a combination of detecting the browser size and managing a `toggle` cookie to keep the state the same when the page is reloaded. Check out the `js/angular/bootstrap.js` file.

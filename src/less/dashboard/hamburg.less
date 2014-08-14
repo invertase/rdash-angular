@@ -4,9 +4,14 @@
     #page-wrapper {
       padding-left: 0;
     }
-    #page-wrapper:not(.active) #sidebar-wrapper {
-      position: absolute;
-      left: -100px;     
+    #page-wrapper:not(.active) {
+      #sidebar-wrapper {
+        position: absolute;
+        left: -100px;     
+      }
+      ul.sidebar .sidebar-title.separator {
+        display: none;
+      }
     }
     #page-wrapper.active #sidebar-wrapper {
       position: fixed;
@@ -19,9 +24,6 @@
     }
     #sidebar-wrapper ul.sidebar li.sidebar-main, #page-wrapper.active #sidebar-wrapper ul.sidebar li.sidebar-main {
       transition: margin-left .4s ease 0s;
-    }
-    #page-wrapper:not(.active) ul.sidebar .sidebar-title.separator {
-      display: none;
     }
   }
 }

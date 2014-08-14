@@ -12,12 +12,14 @@
         .page {
             font-size: 17px;
             padding-top: 11px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
         .breadcrumb-links {
             font-size: 10px;
+        }
+        div {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
     .login {
@@ -27,6 +29,7 @@
         }
     }
     .user {
+        min-width: 130px;
         & > .item {
             width: 65px;
             height: 60px;
@@ -85,16 +88,5 @@
                 content: '';
             }
         }
-    }
-}
-
-@media only screen and (min-width : 993px) {
-    .row.header .meta .page {
-      width: 380px;
-    }
-}
-@media only screen and (max-width : 992px) {
-    .row header .meta .page {
-      width: 180px;
     }
 }

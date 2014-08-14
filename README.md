@@ -95,6 +95,6 @@ If you wish to set this text to red, to display an error for example, simply rep
 
 The loading 'spinner' is a simple directive created by AngularJS within the `js/angular/bootstrap.js` file which replaces an HTML element with a define template. In this case, the HTML template is taken from [this awesome spinkit repo](http://tobiasahlin.com/spinkit/), and the CSS placed in the `css/dashboard/loading.css` file (which is imported at the top of the `dashboard.css` file).
 
-Usage of the directive: `<loading></loading>` or `<div loading></div>`
+Usage of the directive: `<rd-loading></rd-loading>` or `<div rd-loading></div>`
 
 If you want to change it, simply replace the template and CSS!

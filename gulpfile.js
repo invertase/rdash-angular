@@ -1,7 +1,7 @@
-var gulp      = require('gulp'), 
+var gulp    = require('gulp'),
   less      = require('gulp-less'),
-  usemin 		= require('gulp-usemin'),
-  wrap = require('gulp-wrap');
+  usemin    = require('gulp-usemin'),
+  wrap      = require('gulp-wrap');
 
 var paths = {
   js: 'src/js/**/*.*',

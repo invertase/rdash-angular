@@ -15,16 +15,26 @@ Live Example:
 
 ### Usage
 
-Simply clone, or download and unzip this repository and access the root via your browser. There is only one page on show (`index.html`), and the relevant sections have been commented.
+Simply clone, or download and unzip this repository and access the dist folder via your browser. There is only one page on show (`index.html`), and the relevant sections have been commented.
 
-If you want to use LESS, then cd into the root directory and
+
+### Development
+
+Requirements:
+* Node
+* NPM
+
+The project uses:
+* [Gulp](http://gulpjs.com/)
+* [Bower](http://bower.io/) 
+* [AngularJS](https://angularjs.org/)
 
 ```
 npm install
 
 ```
 
-After that, run `gulp` in order to compile the LESS files into CSS.
+After that, run `gulp build` to build the project.
 
 #### AngularJS
 

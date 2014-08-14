@@ -42,9 +42,6 @@
   <!-- build:js lib/uiBreadcrumbs/uiBreadcrumbs.js -->
   <script type="text/javascript" src="js/uiBreadcrumbs/uiBreadcrumbs.js"></script>
   <!-- endbuild -->
-  <!-- build:js lib/uiBreadcrumbs/uiBreadcrumbs.tpl.html -->
-  <script type="text/ng-template" src="js/uiBreadcrumbs/uiBreadcrumbs.tpl.html"></script>
-  <!-- endbuild -->
 
   <!-- build:js js/dashboard.js -->
   <script type="text/javascript" src="js/dashboard/module.js"></script>
@@ -357,6 +354,14 @@
       </div>
     </div>
     <!-- End Main Content -->
+  </script>
+
+  <script type="text/ng-template" id="uiBreadcrumbs.tpl.html">
+    <ol class="breadcrumb">
+      <li ng-repeat="crumb in breadcrumbs"
+          ng-class="{ active: $last }"><a ui-sref="{{ crumb.route }}" ng-if="!$last">{{ crumb.displayName }}&nbsp;</a><span ng-show="$last">{{ crumb.displayName }}</span>
+      </li>
+    </ol>
   </script>
 
   <script type="text/ng-template" id="tables.html">

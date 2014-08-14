@@ -10,7 +10,8 @@ var paths = {
   styles: 'src/less/**/*.less',
   index: 'src/index.html',
   bower_fonts: 'src/bower_components/**/*.{ttf,woff,eof,svg}',
-  bower_components: 'src/bower_components/**/*.*'
+  bower_components: 'src/bower_components/**/*.*',
+  watch_path: 'src/less/dashboard/**/*.less'
 };
 
 
@@ -51,6 +52,13 @@ gulp.task('compile-less', function(){
       .pipe(less())
       .pipe(gulp.dest('dist/css'));
 });
+
+/**
+ * Watch less
+ */
+gulp.task('watch-less', function() {
+  gulp.watch(paths.watch_path, ['compile-less']);
+})
 
 gulp.task('build', ['usemin', 'copy-assets']);
 gulp.task('default', ['build']);

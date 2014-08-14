@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "author": "Elliot Hesp",
   "contributors": [
-    "Leonel Samayoa <leonel.e.samayoa@gmail.com> (http://gobliip.com)"
+    "Leonel Samayoa <leonel.e.samayoa@gmail.com> (http://gobliip.com)",
+    "Ricardo Pascua <rdpascua@outlook.com>"
   ],
   "scripts": {
     "postinstall": "node node_modules/bower/bin/bower install"

@@ -39,6 +39,9 @@
   <!-- build:js lib/angular-ui-router/angular-ui-router.js -->
   <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <!-- endbuild -->
+  <!-- build:js lib/uiBreadcrumbs/uiBreadcrumbs.js -->
+  <script type="text/javascript" src="js/uiBreadcrumbs/uiBreadcrumbs.js"></script>
+  <!-- endbuild -->
 
   <!-- build:js js/dashboard.js -->
   <script type="text/javascript" src="js/dashboard/module.js"></script>
@@ -65,10 +68,10 @@
         </li>
         <li class="sidebar-title"><span>NAVIGATION</span></li>
         <li class="sidebar-list">
-          <a href="#">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
+          <a ui-sref="index">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
         </li>
         <li class="sidebar-list">
-          <a href="#/tables">Tables <span class="menu-icon fa fa-tachometer"></span></a>
+          <a ui-sref="index.tables">Tables <span class="menu-icon fa fa-tachometer"></span></a>
         </li>
         <li class="sidebar-list">
           <a href="#">Servers <span class="menu-icon fa fa-tasks"></span></a>
@@ -114,7 +117,7 @@
                 Dashboard
               </div>
               <div class="breadcrumb-links">
-                Home / Dashboard
+                <ui-breadcrumbs displayname-property="data.displayName"></ui-breadcrumbs>
               </div>
             </div>
             <div class="user pull-right">
@@ -171,7 +174,7 @@
         <!-- End Header Bar -->
 
         <!-- Main Content -->
-        <section data-ui-view></section>
+        <section ui-view="content"></section>
       </div><!-- End Page Content -->
     </div><!-- End Content Wrapper -->
   </div><!-- End Page Wrapper -->
@@ -350,6 +353,14 @@
       </div>
     </div>
     <!-- End Main Content -->
+  </script>
+
+  <script type="text/ng-template" id="uiBreadcrumbs.tpl.html">
+    <ol class="breadcrumb">
+      <li ng-repeat="crumb in breadcrumbs"
+          ng-class="{ active: $last }"><a ui-sref="{{ crumb.route }}" ng-if="!$last">{{ crumb.displayName }}&nbsp;</a><span ng-show="$last">{{ crumb.displayName }}</span>
+      </li>
+    </ol>
   </script>
 
   <script type="text/ng-template" id="tables.html">

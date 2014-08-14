@@ -1,1 +1,1 @@
-angular.module('Dashboard', ['ui.bootstrap', 'ui.router', 'ngCookies']);
+angular.module('Dashboard', ['ui.bootstrap', 'ui.router', 'ngCookies', 'angularUtils.directives.uiBreadcrumbs']);

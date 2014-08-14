@@ -71,10 +71,10 @@
         </li>
         <li class="sidebar-title"><span>NAVIGATION</span></li>
         <li class="sidebar-list">
-          <a href="#">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
+          <a ui-sref="index">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
         </li>
         <li class="sidebar-list">
-          <a href="#/tables">Tables <span class="menu-icon fa fa-tachometer"></span></a>
+          <a ui-sref="index.tables">Tables <span class="menu-icon fa fa-tachometer"></span></a>
         </li>
         <li class="sidebar-list">
           <a href="#">Servers <span class="menu-icon fa fa-tasks"></span></a>
@@ -177,7 +177,7 @@
         <!-- End Header Bar -->
 
         <!-- Main Content -->
-        <section data-ui-view></section>
+        <section ui-view="content"></section>
       </div><!-- End Page Content -->
     </div><!-- End Content Wrapper -->
   </div><!-- End Page Wrapper -->

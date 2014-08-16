@@ -41,6 +41,3 @@ Icon
 
 # Bower components
 /src/bower_components
-
-# Gulp output
-/dist

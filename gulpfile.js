@@ -3,6 +3,8 @@ var gulp    = require('gulp'),
   usemin    = require('gulp-usemin'),
   wrap      = require('gulp-wrap'),
   templateCache = require('gulp-angular-templatecache');
+  connect   = require('gulp-connect'),
+  watch     = require('gulp-watch');
 
 var paths = {
   js: 'src/js/**/*.*',
@@ -10,6 +12,7 @@ var paths = {
   images: 'src/img/**/*.*',
   styles: 'src/less/**/*.less',
   index: 'src/index.html',
+  templates: 'src/templates/**/*.html',
   bower_fonts: 'src/bower_components/**/*.{ttf,woff,eof,svg}',
   bower_components: 'src/bower_components/**/*.*'
 };
@@ -45,13 +48,37 @@ gulp.task('copy-bower_fonts', function(){
 });
 
 /**
+ * Watch src
+ */
+gulp.task('watch', function () {
+  gulp.watch([paths.styles, paths.index, paths.js], ['usemin']);
+  gulp.watch([paths.images], ['copy-images']);
+  gulp.watch([paths.fonts], ['copy-fonts']);
+  gulp.watch([paths.bower_fonts], ['copy-bower_fonts']);
+  gulp.watch([paths.templates], ['compile-templates']);
+});
+
+gulp.task('webserver', function() {
+  connect.server({
+    root: 'dist',
+    livereload: true
+  });
+});
+
+gulp.task('livereload', function() {
+  gulp.src(['dist/**/*.*'])
+    .pipe(watch())
+    .pipe(connect.reload());
+});
+
+/**
  * Template cache generation
  */
 gulp.task('compile-templates', function () {
-  return gulp.src('src/templates/**/*.html')
+  return gulp.src(paths.templates)
         .pipe(templateCache('dashboard-tpls.js', { module: 'dashboard.tpls', standalone: true }))
         .pipe(gulp.dest('dist/js/'));
 });
 
-gulp.task('build', ['compile-templates', 'usemin', 'copy-assets']);
-gulp.task('default', ['build']);
+gulp.task('build', ['compile-templates','usemin', 'copy-assets']);
+gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);

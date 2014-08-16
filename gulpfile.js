@@ -1,7 +1,8 @@
 var gulp    = require('gulp'),
   less      = require('gulp-less'),
   usemin    = require('gulp-usemin'),
-  wrap      = require('gulp-wrap');
+  wrap      = require('gulp-wrap'),
+  templateCache = require('gulp-angular-templatecache');
 
 var paths = {
   js: 'src/js/**/*.*',
@@ -10,8 +11,7 @@ var paths = {
   styles: 'src/less/**/*.less',
   index: 'src/index.html',
   bower_fonts: 'src/bower_components/**/*.{ttf,woff,eof,svg}',
-  bower_components: 'src/bower_components/**/*.*',
-  watch_path: 'src/less/dashboard/**/*.less'
+  bower_components: 'src/bower_components/**/*.*'
 };
 
 
@@ -45,20 +45,13 @@ gulp.task('copy-bower_fonts', function(){
 });
 
 /**
- * Compile less
+ * Template cache generation
  */
-gulp.task('compile-less', function(){
-  return gulp.src(paths.styles)
-      .pipe(less())
-      .pipe(gulp.dest('dist/css'));
+gulp.task('compile-templates', function () {
+  return gulp.src('src/templates/**/*.html')
+        .pipe(templateCache('dashboard-tpls.js', { module: 'dashboard.tpls', standalone: true }))
+        .pipe(gulp.dest('dist/js/'));
 });
 
-/**
- * Watch less
- */
-gulp.task('watch-less', function() {
-  gulp.watch(paths.watch_path, ['compile-less']);
-})
-
-gulp.task('build', ['usemin', 'copy-assets']);
+gulp.task('build', ['compile-templates', 'usemin', 'copy-assets']);
 gulp.task('default', ['build']);

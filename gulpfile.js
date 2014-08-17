@@ -3,7 +3,10 @@ var gulp    = require('gulp'),
   usemin    = require('gulp-usemin'),
   wrap      = require('gulp-wrap'),
   connect   = require('gulp-connect'),
-  watch     = require('gulp-watch');
+  watch     = require('gulp-watch'),
+  gulpkss   = require('gulp-kss'),
+  concat    = require('gulp-concat'),
+  addSrc    = require('gulp-add-src');
 
 var paths = {
   js: 'src/js/**/*.*',
@@ -82,7 +85,35 @@ gulp.task('compile-less', function(){
  */
 gulp.task('watch-less', function() {
   gulp.watch(paths.watch_path, ['compile-less']);
-})
+});
+
+gulp.task('style-guide', function() {
+  gulp.src([paths.styles])
+    .pipe(gulpkss({
+      overview:  './README.md'
+    }))
+    .pipe(gulp.dest('docs/styleguide/'));
+
+// Concat and compile all your styles for correct rendering of the styleguide.
+  gulp.src(paths.styles)
+    .pipe(less())
+    .pipe(addSrc(['' +
+      'src/bower_components/bootstrap/dist/css/bootstrap.min.css',
+      'src/bower_components/font-awesome/css/font-awesome.min.css'
+    ]))
+    .pipe(concat('public/style.css'))
+    .pipe(gulp.dest('docs/styleguide/fonts'));
+
+  //copy fonts
+  gulp.src([
+    'src/bower_components/font-awesome/fonts/*.*'
+  ]).pipe(gulp.dest('docs/styleguide/fonts'));
+
+  gulp.src([
+    'src/fonts/*.*'
+  ]).pipe(gulp.dest('docs/fonts'));
+
+});
 
 gulp.task('build', ['usemin', 'copy-assets']);
 gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);

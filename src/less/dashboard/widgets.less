@@ -1,6 +1,52 @@
-/**
- * Widgets
- */
+/*
+Widgets
+
+Widgets to display in the `page-content` conatiner
+
+Styleguide 1
+*/
+
+
+/*
+Widgets with icon
+
+Markup:
+<div class="widget">
+  <div class="widget-body">
+    <div class="widget-icon green pull-left">
+      <i class="fa fa-users"></i>
+    </div>
+    <div class="widget-content pull-left">
+    <div class="title">80</div>
+    <div class="comment">Users</div>
+    </div>
+  <div class="clearfix"></div>
+  </div>
+</div>
+
+Styleguide 1.1.
+*/
+
+/*
+Widgets with header
+
+Markup:
+<div class="widget">
+  <div class="widget-title">
+    <i class="fa fa-plus"></i> Extras
+    <button class="btn btn-sm btn-info pull-right">Button</button>
+    <div class="clearfix"></div>
+  </div>
+  <div class="widget-body">
+    <div class="message">
+      This is a standard message which will also work the ".no-padding" class, I can also <span class="error">be an error message!</span>
+    </div>
+  </div>
+</div>
+
+Styleguide 1.2.
+*/
+
 .widget {
     background: #ffffff;
     border: 1px solid transparent;
@@ -61,6 +107,7 @@
     .widget-body.no-padding {
         padding: 0;
     }
+
     .widget-icon {
         background: #30426a;
         width: 65px;

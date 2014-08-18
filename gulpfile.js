@@ -19,7 +19,7 @@ var paths = {
 gulp.task('usemin', function() {
   return gulp.src(paths.index)
     .pipe(usemin({
-      less: [less(), 'concat'],
+      less: ['concat', less()],
       js: ['concat', wrap('(function(){ \n<%= contents %>\n})();')],
     }))
     .pipe(gulp.dest('dist/'));

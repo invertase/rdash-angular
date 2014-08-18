@@ -77,12 +77,5 @@ gulp.task('compile-less', function(){
       .pipe(gulp.dest('dist/css'));
 });
 
-/**
- * Watch less
- */
-gulp.task('watch-less', function() {
-  gulp.watch(paths.watch_path, ['compile-less']);
-})
-
 gulp.task('build', ['usemin', 'copy-assets']);
 gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);

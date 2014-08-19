@@ -4,7 +4,7 @@
   "author": "Elliot Hesp",
   "contributors": [
     "Leonel Samayoa <leonel.e.samayoa@gmail.com> (http://gobliip.com)",
-    "Ricardo Pascua <rdpascua@outlook.com>",
+    "Ricardo Pascua <rdpascua@outlook.com>"
   ],
   "devDependencies": {
     "bower": "^1.3.9",

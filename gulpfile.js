@@ -19,7 +19,7 @@ var paths = {
 gulp.task('usemin', function() {
   return gulp.src(paths.index)
     .pipe(usemin({
-      less: ['concat', less()],
+      less: [less(), 'concat'],
       js: ['concat', wrap('(function(){ \n<%= contents %>\n})();')],
     }))
     .pipe(gulp.dest('dist/'));
@@ -76,6 +76,13 @@ gulp.task('compile-less', function(){
       .pipe(less())
       .pipe(gulp.dest('dist/css'));
 });
+
+/**
+ * Watch less
+ */
+gulp.task('watch-less', function() {
+  gulp.watch(paths.watch_path, ['compile-less']);
+})
 
 gulp.task('build', ['usemin', 'copy-assets']);
 gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);

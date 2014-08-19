@@ -15,8 +15,6 @@
   <!-- endbuild -->
 
   <!-- build:less css/dashboard/dashboard.css -->
-  <link rel="stylesheet" type="text/css" href="less/dashboard/variables.less">
-  <link rel="stylesheet" type="text/css" href="less/dashboard/mixins.less">
   <link rel="stylesheet" type="text/css" href="less/dashboard/main.less">
   <link rel="stylesheet" type="text/css" href="less/dashboard/loading.less">
   <link rel="stylesheet" type="text/css" href="less/dashboard/content.less">
@@ -71,7 +69,7 @@
           <a href="#">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
         </li>
         <li class="sidebar-list">
-          <a href="#/tables">Tables <span class="menu-icon fa fa-table"></span></a>
+          <a href="#/tables">Tables <span class="menu-icon fa fa-tachometer"></span></a>
         </li>
         <li class="sidebar-list">
           <a href="#">Servers <span class="menu-icon fa fa-tasks"></span></a>
@@ -143,7 +141,7 @@
                       Logout
                     </a>
                   </li>
-                </ul>
+                </ul>               
               </div>
               <div class="item dropdown">
                <a href="#" class="dropdown-toggle">
@@ -248,7 +246,7 @@
     <div class="row">
       <div class="col-lg-6">
         <div class="widget">
-          <div class="widget-header">
+          <div class="widget-title">
             <i class="fa fa-tasks"></i> Servers
             <a href="#" class="pull-right">Manage</a>
           </div>
@@ -275,7 +273,7 @@
       </div>
       <div class="col-lg-6">
         <div class="widget">
-          <div class="widget-header">
+          <div class="widget-title">
             <i class="fa fa-users"></i> Users
             <input type="text" placeholder="Search" class="form-control input-sm pull-right" />
             <div class="clearfix"></div>
@@ -300,7 +298,7 @@
     <div class="row">
       <div class="col-lg-6">
         <div class="widget">
-          <div class="widget-header">
+          <div class="widget-title">
             <i class="fa fa-plus"></i> Extras
             <button class="btn btn-sm btn-info pull-right">Button</button>
             <div class="clearfix"></div>
@@ -323,11 +321,15 @@
               <div class="form-group has-feedback has-success">
                 <label for="label" class="col-sm-2 control-label">Inline Form</label>
                 <div class="col-sm-5">
-                  <input  type="text" class="form-control" />
+                  <input  type="text" class="form-control" />  
                     <span class="fa fa-key form-control-feedback"></span>
                 </div>
                 <div class="col-sm-5">
                   <div class="input-mask">I'm an input mask!</div>
+                </div>
+                <div class="widget-body">
+                  <!-- Check out the Angular Directive inside bootstrap.js! -->
+                  <rd-loading></loading>
                 </div>
               </div>
             </form>
@@ -337,7 +339,7 @@
       </div>
       <div class="col-lg-6">
         <div class="widget">
-          <div class="widget-header">
+          <div class="widget-title">
             <i class="fa fa-cog fa-spin"></i> Loading Directive
             <a href="http://tobiasahlin.com/spinkit/" target="_blank" class="pull-right">SpinKit</a>
           </div>
@@ -355,7 +357,7 @@
     <div class="row">
       <div class="col-lg-6">
         <div class="widget">
-          <div class="widget-header">
+          <div class="widget-title">
             <i class="fa fa-tasks"></i> Servers
             <a href="#" class="pull-right">Manage</a>
           </div>
@@ -382,7 +384,7 @@
       </div>
       <div class="col-lg-6">
         <div class="widget">
-          <div class="widget-header">
+          <div class="widget-title">
             <i class="fa fa-tasks"></i> Striped Servers
             <a href="#" class="pull-right">Manage</a>
           </div>

@@ -1,6 +1,6 @@
 angular
 	.module('Dashboard')
-	.directive('rdWidgetTitle', rdWidgetTitle);
+	.directive('rdWidgetHeader', rdWidgetTitle);
 
 function rdWidgetTitle () {
 	var directive = {
@@ -10,7 +10,7 @@ function rdWidgetTitle () {
             icon: '@'
         },
 		transclude: true,
-        template: '<div class="widget-title"> <i class="fa" ng-class="icon"></i> {{title}} <div class="pull-right" ng-transclude></div></div>',
+        template: '<div class="widget-header"> <i class="fa" ng-class="icon"></i> {{title}} <div class="pull-right" ng-transclude></div></div>',
         restrict: 'E'
     };
     return directive;

@@ -32,8 +32,8 @@ The project uses:
 
 Clone the repo, run `npm install` to install all dependencies.
 After that you can either: 
-- Run `node_mopdules/.bin/gulp build` to build the project.
-- Run `node_mopdules/.bin/gulp` to start a local webserver with **AWESOME** automatic compilation and [Livereload](http://livereload.com/) (We use [gulp-connect](https://github.com/avevlad/gulp-connect)).
+- Run `node_modules/.bin/gulp build` to build the project.
+- Run `node_modules/.bin/gulp` to start a local webserver with **AWESOME** automatic compilation and [Livereload](http://livereload.com/) (We use [gulp-connect](https://github.com/avevlad/gulp-connect)).
 
 ### Stylesheets
 

@@ -1,16 +1,11 @@
+'use strict';
+
 angular
-	.module('Dashboard')
-	.directive('rdWidget', rdWidget);
-
-function rdWidget () {
-	var directive = {
-		transclude: true,
-        template: '<div class="widget" ng-transclude></div>',
-        restrict: 'EA'
+  .module('Dashboard')
+  .directive('rdWidget', function() {
+    return {
+      transclude: true,
+      template: '<div class="widget" ng-transclude></div>',
+      restrict: 'EA'
     };
-    return directive;
-
-    function link(scope, element, attrs) {
-      /* */
-    }
-};
+  });

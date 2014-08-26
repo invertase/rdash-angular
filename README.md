@@ -21,6 +21,7 @@ If you want to use LESS, then cd into the root directory and
 
 ```
 npm install
+bower install
 
 ```
 

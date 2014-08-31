@@ -1,51 +1,47 @@
 ## AngularJS + Bootstrap Responsive Dashboard
 
-This dashboard front-end was created as I was lacking a simple responsive but slick looking dashboard for another project of mine.  Other available dashboards were bloated with external plugins and required a lot of hackery/work out of the box - plus the fact many were powered by jQuery. The design takes inspiration from other dashboards around, but the code to create the layout is my own.
+This AngularJS driven dashboard was created as there is a lack of free, open-source, readable and bloat free admin templates. Many premium templates require a lot of hackery out of the box - this template is intended to have only the extra features we think are needed to get up and running as quick as possible.
 
-Compatibility/Tested:
-* Chrome, Firefox, IE 11+
-* Works best on screen sizes greater than ~335px
+> [Live Demo!](http://ehesp.github.io/Responsive-Dashboard)
 
-[Responsive Screenshots](http://ami.responsivedesign.is/?url=http://ehesp.github.io/Responsive-Dashboard/)
+[*Want the dashboard without AngularJS and build functionality?*](https://github.com/Ehesp/Responsive-Dashboard/tree/barebones)
 
-Live Example:
-* http://ehesp.github.io/Responsive-Dashboard/
-
-> jQuery version available on the [jQuery branch](https://github.com/Ehesp/Responsive-Dashboard/tree/jquery)!
-
-### Usage
-
-Simply clone, or download and unzip this repository and access the dist folder via your browser. There is only one page on show (`index.html`), and the relevant sections have been commented.
-
-### Development
-
-Requirements:
+### Requirements
 * [Node](http://nodejs.org/)
 * [NPM](http://npmjs.org/)
 
-The project uses:
+### Usage
+
+This project uses the following tools:
 * [Gulp](http://gulpjs.com/)
 * [Bower](http://bower.io/) 
 * [AngularJS](https://angularjs.org/)
 
 #### Getting Started
 
-Clone the repo, run `npm install` to install all dependencies.
-After that you can either: 
-- Run `node_modules/.bin/gulp build` to build the project.
-- Run `node_modules/.bin/gulp` to start a local webserver with **AWESOME** automatic compilation and [Livereload](http://livereload.com/) (We use [gulp-connect](https://github.com/avevlad/gulp-connect)).
+1. Clone the repository and run `npm install` to install all dependencies. This will also run the `bower install` automatically after completion.
+2. There are now two `gulp` commands to choose from:
+- `node_modules/.bin/gulp build` to build the project.
+- `node_modules/.bin/gulp` to start a local webserver with **AWESOME** automatic compilation and [Livereload](http://livereload.com/) (We use [gulp-connect](https://github.com/avevlad/gulp-connect)).
+3. The files will now be built into the `dist` directory.
 
-### Stylesheets
+### Styling
 
-#### Theme
+Currently, only the sidebar colours can be easily be changed. [LESS](http://lesscss.org/) is used for styling so we take advantage of variables - checkout `src/less/dashboard/variables.less` and change the sidebar base colour, the others will be converted for you.
 
-Responsive Dashboard uses [LESS](http://lesscss.org/) for styling so we take advantage of variables to theme the dashboard. Take a look at `src/less/dashboard/variables.less` and customize with your own colors.
+#### Hamburg Menu
 
-#### Bootstrap + Font Awesome
+By default the responsive dashboard menu on a small sized screen sticks to the left side of the screen. If you wish the menu to have 'native app' menu functionality, where the sidebar overlaps the content from the left and side, simply add the `hamburg` class to the body:
 
-The grid layout and components are powered by [Bootstrap](http://getbootstrap.com/), also Font Awesome icons are ready to use.
+```HTML
+<body class="hamburg">
+```
 
-##### Widgets
+### Bootstrap & Font Awesome
+
+The grid layout and components are powered by [Bootstrap](http://getbootstrap.com/), also [Font Awesome](http://fontawesome.io/) icons are ready to use.
+
+#### Widgets
 
 A widget is essentially a white container box with some styling, that will expand 100% of it's parent container. To separate these out, I suggest putting them inside a bootstrap grid item, e.g:
 
@@ -60,7 +56,7 @@ Any content can be inside a `widget-body`, which will be padded by default. Thre
 
 > If no size is set, the content will expand vertically based on content size.
 
-###### Widget Body
+##### Widget Body
 
 **Padding**
 
@@ -106,14 +102,29 @@ Usage of the directive: `<rd-loading></rd-loading>` or `<div rd-loading></div>`
 
 If you want to change it, simply replace the template and CSS!
 
-#### Widget component
+##### Widget component
 
-Usage: 
+Instead of hardcoding the widget HTML directly, AngularJS widget component functionality is ready to use:
 
 ```HTML
 <rd-widget>	
 	<rd-widget-header title="Hello World"><rd-widget-header>
 	<!-- The if the loading parameter is true, it will show an spinner instead of the content.-->
 	<rd-widget-body loading="true">Hello Universe<rd-widget-body>
-<rd-widget>
+</rd-widget>
 ```
+
+### FAQ
+
+#### What is the dashboard compatible with?
+
+The dashboard uses CSS3 for animations along with other style enhancements meaning browsers supporting this (Chrome, Firefox, IE11+) are compatible.
+As for smaller screen sizes, the dashboard works best on screen sizes greater than ~335px.
+
+#### Any screenshots?
+
+Checkout [am-i-responsive](http://ami.responsivedesign.is/?url=http://ehesp.github.io/Responsive-Dashboard), this doesn't have the Hamburg menu enabled though.
+
+#### I don't want to use AngularJS or NPM/Bower/Gulp!
+
+No worries, theres a barebones branch available with the basic HTML and CSS!

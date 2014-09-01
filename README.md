@@ -107,12 +107,27 @@ If you want to change it, simply replace the template and CSS!
 Instead of hardcoding the widget HTML directly, AngularJS widget component functionality is ready to use:
 
 ```HTML
+<rd-widget>
+  <rd-widget-header icon="fa-tasks" title="Awesome Widget">
+    <a href="#" class="pull-right">Widget Link</a>
+  </rd-widget-header>
+  <!-- Classes are optional but allow you to style the widget-body. -->
+  <rd-widget-body classes="medium no-padding">
+    <p>Hello world from a widget!</p>
+  </rd-widget-body>
+</rd-widget>
+```
+
+Loading widget
+
+```HTML
 <rd-widget>	
 	<rd-widget-header title="Hello World"><rd-widget-header>
 	<!-- The if the loading parameter is true, it will show an spinner instead of the content.-->
 	<rd-widget-body loading="true">Hello Universe<rd-widget-body>
 </rd-widget>
 ```
+
 
 ### FAQ
 

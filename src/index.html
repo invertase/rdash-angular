@@ -49,6 +49,9 @@
   <script type="text/javascript" src="js/dashboard/controllers/master-ctrl.js"></script>
   <script type="text/javascript" src="js/dashboard/controllers/alerts-ctrl.js"></script>
   <script type="text/javascript" src="js/dashboard/directives/loading.js"></script>
+  <script type="text/javascript" src="js/dashboard/directives/widget.js"></script>
+  <script type="text/javascript" src="js/dashboard/directives/widget-body.js"></script>
+  <script type="text/javascript" src="js/dashboard/directives/widget-header.js"></script>
   <!-- endbuild -->
   <!-- SCRIPTS -->
 
@@ -178,71 +181,58 @@
 
     <div class="row">
       <div class="col-lg-3 col-md-6 col-xs-12">
-        <div class="widget">
-          <div class="widget-body">
+        <rd-widget> 
+          <rd-widget-body>
             <div class="widget-icon green pull-left">
               <i class="fa fa-users"></i>
             </div>
-            <div class="widget-content pull-left">
-              <div class="title">80</div>
-              <div class="comment">Users</div>
-            </div>
-            <div class="clearfix"></div>
-          </div>
-        </div>
+            <div class="title">80</div>
+            <div class="comment">Users</div>
+          </rd-widget-body>
+        </rd-widget>
       </div>
       <div class="col-lg-3 col-md-6 col-xs-12">
-        <div class="widget">
-          <div class="widget-body">
+        <rd-widget> 
+          <rd-widget-body>
             <div class="widget-icon red pull-left">
               <i class="fa fa-tasks"></i>
             </div>
-            <div class="widget-content pull-left">
-              <div class="title">16</div>
-              <div class="comment">Servers</div>
-            </div>
-            <div class="clearfix"></div>
-          </div>
-        </div>
+            <div class="title">16</div>
+            <div class="comment">Servers</div>
+          </rd-widget-body>
+        </rd-widget>
       </div>
       <div class="col-lg-3 col-md-6 col-xs-12">
-        <div class="widget">
-          <div class="widget-body">
+        <rd-widget> 
+          <rd-widget-body>
             <div class="widget-icon orange pull-left">
               <i class="fa fa-sitemap"></i>
             </div>
-            <div class="widget-content pull-left">
-              <div class="title">225</div>
-              <div class="comment">Documents</div>
-            </div>
-            <div class="clearfix"></div>
-          </div>
-        </div>
+            <div class="title">225</div>
+            <div class="comment">Documents</div>
+          </rd-widget-body>
+        </rd-widget>
       </div>
       <div class="spacer visible-xs"></div>
       <div class="col-lg-3 col-md-6 col-xs-12">
-        <div class="widget">
-          <div class="widget-body">
+        <rd-widget> 
+          <rd-widget-body>
             <div class="widget-icon blue pull-left">
               <i class="fa fa-support"></i>
             </div>
-            <div class="widget-content pull-left">
-              <div class="title">62</div>
-              <div class="comment">Tickets</div>
-            </div>
-            <div class="clearfix"></div>
-          </div>
-        </div>
+            <div class="title">62</div>
+            <div class="comment">Tickets</div>
+          </rd-widget-body>
+        </rd-widget>
       </div>
     </div>
     <div class="row">
       <div class="col-lg-6">
-        <div class="widget">
-          <div class="widget-header">
-            <i class="fa fa-tasks"></i> Servers
+        <rd-widget>
+          <rd-widget-header icon="fa-tasks" title="Servers">
             <a href="#" class="pull-right">Manage</a>
-          </div>
-          <div class="widget-body medium no-padding">
+          </rd-widget-header>
+          <rd-widget-body classes="medium no-padding">
             <div class="table-responsive">
               <table class="table">
                 <tbody>
@@ -260,17 +250,15 @@
                 </tbody>
               </table>
             </div>
-          </div>
-        </div>
+          </rd-widget-body>
+        </rd-widget>
       </div>
       <div class="col-lg-6">
-        <div class="widget">
-          <div class="widget-header">
-            <i class="fa fa-users"></i> Users
+        <rd-widget>
+          <rd-widget-header icon="fa-users" title="Users">
             <input type="text" placeholder="Search" class="form-control input-sm pull-right" />
-            <div class="clearfix"></div>
-          </div>
-          <div class="widget-body medium no-padding">
+          </rd-widget-header>
+          <rd-widget-body classes="medium no-padding">
             <div class="table-responsive">
               <table class="table">
                 <thead>
@@ -283,19 +271,17 @@
                 </tbody>
               </table>
             </div>
-          </div>
-        </div>
+          </rd-widget-body>
+        </rd-widget>
       </div>
     </div>
     <div class="row">
       <div class="col-lg-6">
-        <div class="widget">
-          <div class="widget-header">
-            <i class="fa fa-plus"></i> Extras
+        <rd-widget>
+          <rd-widget-header icon="fa-plus" title="Extras">
             <button class="btn btn-sm btn-info pull-right">Button</button>
-            <div class="clearfix"></div>
-          </div>
-          <div class="widget-body">
+          </rd-widget-header>
+          <rd-widget-body>
 
             <div class="message">
               This is a standard message which will also work the ".no-padding" class, I can also <span class="error">be an error message!</span>
@@ -322,20 +308,16 @@
               </div>
             </form>
 
-          </div>
-        </div>
+          </rd-widget-body>
+        </rd-widget>
       </div>
       <div class="col-lg-6">
-        <div class="widget">
-          <div class="widget-header">
-            <i class="fa fa-cog fa-spin"></i> Loading Directive
+        <rd-widget>
+          <rd-widget-header icon="fa-cog fa-spin" title="Loading Directive">
             <a href="http://tobiasahlin.com/spinkit/" target="_blank" class="pull-right">SpinKit</a>
-          </div>
-          <div class="widget-body">
-            <!-- Check out the Angular Directive inside bootstrap.js! -->
-            <rd-loading></rd-loading>
-          </div>
-        </div>
+          </rd-widget-header>
+          <rd-widget-body loading="true"></rd-widget-body>
+        </rd-widget>
       </div>
     </div>
     <!-- End Main Content -->
@@ -344,12 +326,11 @@
   <script type="text/ng-template" id="tables.html">
     <div class="row">
       <div class="col-lg-6">
-        <div class="widget">
-          <div class="widget-header">
-            <i class="fa fa-tasks"></i> Servers
+        <rd-widget>
+          <rd-widget-header icon="fa-tasks" title="Servers">
             <a href="#" class="pull-right">Manage</a>
-          </div>
-          <div class="widget-body medium no-padding">
+          </rd-widget-header>
+          <rd-widget-body classes="medium no-padding">
             <div class="table-responsive">
               <table class="table">
                 <tbody>
@@ -367,16 +348,15 @@
                 </tbody>
               </table>
             </div>
-          </div>
-        </div>
+          </rd-widget-body>
+        </rd-widget>
       </div>
       <div class="col-lg-6">
-        <div class="widget">
-          <div class="widget-header">
-            <i class="fa fa-tasks"></i> Striped Servers
+        <rd-widget>
+          <rd-widget-header icon="fa-tasks" title="Striped Servers">
             <a href="#" class="pull-right">Manage</a>
-          </div>
-          <div class="widget-body medium no-padding">
+          </rd-widget-header>
+          <rd-widget-body classes="medium no-padding">
             <div class="table-responsive table-striped">
               <table class="table">
                 <tbody>
@@ -394,8 +374,8 @@
                 </tbody>
               </table>
             </div>
-          </div>
-        </div>
+          </rd-widget-body>
+        </rd-widget>
       </div>
     </div>
   </script>

@@ -3,6 +3,7 @@ var gulp    = require('gulp'),
   wrap      = require('gulp-wrap'),
   watch     = require('gulp-watch'),  
   concat    = require('gulp-concat'),
+  insert    = require('gulp-insert'),
   uglify    = require('gulp-uglify'), 
   connect   = require('gulp-connect'),
   cssmin    = require('gulp-minify-css'),
@@ -62,6 +63,7 @@ gulp.task('copy-scripts', function() {
   return gulp.src(paths.js)
     .pipe(uglify())
     .pipe(concat('dashboard.min.js'))
+    .pipe(insert.prepend('\'use strict\';'))
     .pipe(gulp.dest('dist/js'));
 });
 
@@ -71,6 +73,7 @@ gulp.task('copy-templates', function() {
     .pipe(templates({module: moduleName}))
     .pipe(uglify())
     .pipe(concat('templates.min.js'))
+    .pipe(insert.prepend('\'use strict\';'))
     .pipe(gulp.dest('dist/js'));
 });
 

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Route configuration for the Dashboard module.
  */

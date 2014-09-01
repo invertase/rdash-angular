@@ -2,6 +2,10 @@
   "name": "Responsive-Dashboard",
   "version": "0.0.2",
   "author": "Elliot Hesp",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Ehesp/Responsive-Dashboard"
+  },
   "contributors": [
     "Leonel Samayoa <leonel.e.samayoa@gmail.com> (http://gobliip.com)",
     "Ricardo Pascua <rdpascua@outlook.com>"
@@ -12,6 +16,7 @@
   "devDependencies": {
     "bower": "^1.3.9",
     "gulp": "~3.8.0",
+    "gulp-angular-templates": "^0.0.1",
     "gulp-connect": "^2.0.6",
     "gulp-less": "~1.3.3",
     "gulp-usemin": "^0.3.7",

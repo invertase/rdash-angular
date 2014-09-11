@@ -6,54 +6,7 @@
 
 	<title>Dashboard</title>
 
-  <!-- build:less lib/bootstrap/css/bootstrap.css -->
-  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <!-- endbuild -->
-
-  <!-- build:css lib/font-awesome/css/font-awesome.css -->
-  <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.css">
-  <!-- endbuild -->
-
-  <!-- build:less css/dashboard/dashboard.css -->
-  <link rel="stylesheet" type="text/css" href="less/dashboard/variables.less">
-  <link rel="stylesheet" type="text/css" href="less/dashboard/mixins.less">
-  <link rel="stylesheet" type="text/css" href="less/dashboard/main.less">
-  <link rel="stylesheet" type="text/css" href="less/dashboard/loading.less">
-  <link rel="stylesheet" type="text/css" href="less/dashboard/content.less">
-  <link rel="stylesheet" type="text/css" href="less/dashboard/header.less">
-  <link rel="stylesheet" type="text/css" href="less/dashboard/sidebar.less">
-  <link rel="stylesheet" type="text/css" href="less/dashboard/widgets.less">
-  <link rel="stylesheet" type="text/css" href="less/dashboard/hamburg.less">
-  <!-- endbuild -->
-
-  <!-- SCRIPTS -->
-  <!-- build:js lib/angular/angular.js -->
-  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-  <!-- endbuild -->
-  <!-- build:js lib/angular-cookies/angular-cookies.js -->
-  <script type="text/javascript" src="bower_components/angular-cookies/angular-cookies.js"></script>
-  <!-- endbuild -->
-  <!-- build:js lib/angular-bootstrap/ui-bootstrap.js -->
-  <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
-  <!-- endbuild -->
-  <!-- build:js lib/angular-bootstrap/ui-bootstrap-tpls.js -->
-  <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-  <!-- endbuild -->
-  <!-- build:js lib/angular-ui-router/angular-ui-router.js -->
-  <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-  <!-- endbuild -->
-
-  <!-- build:js js/dashboard.js -->
-  <script type="text/javascript" src="js/dashboard/module.js"></script>
-  <script type="text/javascript" src="js/dashboard/routes.js"></script>
-  <script type="text/javascript" src="js/dashboard/controllers/master-ctrl.js"></script>
-  <script type="text/javascript" src="js/dashboard/controllers/alerts-ctrl.js"></script>
-  <script type="text/javascript" src="js/dashboard/directives/loading.js"></script>
-  <script type="text/javascript" src="js/dashboard/directives/widget.js"></script>
-  <script type="text/javascript" src="js/dashboard/directives/widget-body.js"></script>
-  <script type="text/javascript" src="js/dashboard/directives/widget-header.js"></script>
-  <!-- endbuild -->
-  <!-- SCRIPTS -->
+  <link rel="stylesheet" type="text/css" href="css/dashboard.min.css">
 
 </head>
 <body ng-controller="MasterCtrl">
@@ -172,6 +125,11 @@
     </div><!-- End Content Wrapper -->
   </div><!-- End Page Wrapper -->
 
+<<<<<<< HEAD
+  <script type="text/javascript" src="js/vendors.min.js"></script>
+  <script type="text/javascript" src="js/dashboard.min.js"></script>
+  <script type="text/javascript" src="js/templates.min.js"></script>
+=======
   <script type="text/ng-template" id="dashboard.html">
     <div class="row alerts-container" data-ng-controller="AlertsCtrl" data-ng-show="alerts.length">
       <div class="col-xs-12">
@@ -379,5 +337,6 @@
       </div>
     </div>
   </script>
+>>>>>>> develop
 </body>
 </html>

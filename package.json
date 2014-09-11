@@ -2,9 +2,14 @@
   "name": "Responsive-Dashboard",
   "version": "0.0.2",
   "author": "Elliot Hesp",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Ehesp/Responsive-Dashboard"
+  },
   "contributors": [
     "Leonel Samayoa <leonel.e.samayoa@gmail.com> (http://gobliip.com)",
-    "Ricardo Pascua <rdpascua@outlook.com>"
+    "Ricardo Pascua <rdpascua@outlook.com>",
+    "Mathew Goldsborough <mgolds02@gmail.com>"
   ],
   "scripts": {
     "postinstall": "node node_modules/bower/bin/bower install"

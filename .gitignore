@@ -5,6 +5,8 @@ ehthumbs.db
 # Folder config file
 Desktop.ini
 
+.editorconfig
+
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
@@ -36,5 +38,11 @@ Icon
 .Spotlight-V100
 .Trashes
 
+# Dist Directory
+/dist
+
 # Node modules
 /node_modules
+
+# Bower components
+/src/components

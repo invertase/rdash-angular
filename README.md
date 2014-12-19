@@ -16,7 +16,7 @@ Check out the live example!
 1. Clone the repository: `git clone https://github.com/rdash/rdash-angular.git`
 2. Install the NodeJS depencanies: `sudo npm install`. This should automatically run a `bower install` command.
 3. Run the gulp build task: `gulp build`.
-4. Run the gulp default task: `gulp`. This will build any changes made automatically, and also run a live reload server on [http://localhost:8888](http://localhost:8080).
+4. Run the gulp default task: `gulp`. This will build any changes made automatically, and also run a live reload server on [http://localhost:8888](http://localhost:8888).
 
 Ensure your preferred web server points towards the `dist` directory.
 
@@ -24,7 +24,7 @@ Ensure your preferred web server points towards the `dist` directory.
 Continue developing the dashboard further by editing the `src` directory. With the `gulp` command, any file changes made will automatically be compiled into the specific location within the `dist` directory.
 
 #### Modules & Packages
-By default, rdash-angular includes [`ui.bootstrap`](http://angular-ui.github.io/bootstrap/), [`ui.router`](https://github.com/angular-ui/ui-router) and [`ngCookies`](https://docs.angularjs.org/api/ngCookies). 
+By default, rdash-angular includes [`ui.bootstrap`](http://angular-ui.github.io/bootstrap/), [`ui.router`](https://github.com/angular-ui/ui-router) and [`ngCookies`](https://docs.angularjs.org/api/ngCookies).
 
 If you'd like to include any additional modules/packages not included with rdash-angular, add them to your `bower.json` file and then update the `src/index.html` file, to include them in the minified distribution output.
 

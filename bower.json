@@ -1,32 +1,35 @@
 {
-  "name": "Responsive-Dashboard",
-  "version": "0.0.2",
-  "homepage": "https://github.com/Ehesp/Responsive-Dashboard",
-  "authors": [
-    "Elliot Hesp <elliot.hesp@gmail.com>",
-    "Ricardo Pascua Jr <rdpascua@outlook.com>",
-    "Leonel Samayoa <leonel.e.samayoa@gmail.com>"
-  ],
-  "description": "AngularJS + Bootstrap Responsive Dashboard",
-  "main": "index.html",
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "angular": "~1.2.21",
-    "angular-cookies": "~1.2.21",
-    "angular-bootstrap": "~0.11.0",
-    "angular-ui-router": "^0.2.10",
-    "bootstrap": "~3.2.0",
-    "font-awesome": "~4.1.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/Ehesp/Responsive-Dashboard.git"
-  }
+    "name": "rdash-angular",
+    "version": "0.0.1",
+    "description": "An AngularJS implementation of the responsive dashboard",
+    "homepage": "https://github.com/Ehesp/Responsive-Dashboard",
+    "authors": [
+        "Elliot Hesp <elliot.hesp@gmail.com>"
+    ],
+    "contributors": [
+        "Ricardo Pascua Jr <rdpascua@outlook.com>",
+        "Leonel Samayoa <leonel.e.samayoa@gmail.com>"
+    ],
+    "main": "index.html",
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "rdash-ui": "1.0.*",
+        "angular": "~1.2.21",
+        "angular-cookies": "~1.2.21",
+        "angular-bootstrap": "~0.11.0",
+        "angular-ui-router": "^0.2.10",
+        "bootstrap": "~3.2.0",
+        "font-awesome": "~4.1.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rdash/rdash-angular"
+    }
 }

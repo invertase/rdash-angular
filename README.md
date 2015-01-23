@@ -10,7 +10,7 @@ Check out the live example!
 ### Requirements
 * [NodeJS](http://nodejs.org/) (with [NPM](https://www.npmjs.org/))
 * [Bower](http://bower.io)
-* [Gulp](http://bower.io)
+* [Gulp](http://gulpjs.com)
 
 ### Installation
 1. Clone the repository: `git clone https://github.com/rdash/rdash-angular.git`

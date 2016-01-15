@@ -3,12 +3,12 @@ var gulp = require('gulp'),
     wrap = require('gulp-wrap'),
     connect = require('gulp-connect'),
     watch = require('gulp-watch'),
-    minifyCss = require('gulp-minify-css'),
+    minifyCss = require('gulp-cssnano'),
     minifyJs = require('gulp-uglify'),
     concat = require('gulp-concat'),
     less = require('gulp-less'),
     rename = require('gulp-rename'),
-    minifyHTML = require('gulp-minify-html');
+    minifyHTML = require('gulp-htmlmin');
 
 var paths = {
     scripts: 'src/js/**/*.*',
@@ -97,7 +97,7 @@ gulp.task('webserver', function() {
 
 gulp.task('livereload', function() {
     gulp.src(['dist/**/*.*'])
-        .pipe(watch())
+        .pipe(watch(['dist/**/*.*']))
         .pipe(connect.reload());
 });
 

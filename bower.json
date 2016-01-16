@@ -21,12 +21,12 @@
     ],
     "dependencies": {
         "rdash-ui": "1.0.*",
-        "angular": "~1.2.21",
-        "angular-cookies": "~1.2.21",
-        "angular-bootstrap": "~0.11.0",
-        "angular-ui-router": "^0.2.10",
-        "bootstrap": "~3.2.0",
-        "font-awesome": "~4.1.0"
+        "angular": "~1.5.0",
+        "angular-cookies": "~1.5.0",
+        "angular-bootstrap": "~1.0.3",
+        "angular-ui-router": "^0.2.15",
+        "bootstrap": "~3.3.6",
+        "font-awesome": "~4.5.0"
     },
     "repository": {
         "type": "git",

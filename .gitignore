@@ -46,3 +46,6 @@ Icon
 
 # Bower components
 /src/components
+
+# JetBrains
+.idea

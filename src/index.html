@@ -17,6 +17,7 @@
   <script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
   <script type="text/javascript" src="components/angular-cookies/angular-cookies.min.js"></script>
   <script type="text/javascript" src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="components/angular-translate/angular-translate.min.js"></script>
   <!-- endbuild -->
   <!-- Custom Scripts -->
   <script type="text/javascript" src="js/dashboard.min.js"></script>
@@ -29,32 +30,32 @@
       <ul class="sidebar">
         <li class="sidebar-main">
           <a ng-click="toggleSidebar()">
-            Dashboard
+            {{ 'DASHBOARD' | translate }}
             <span class="menu-icon glyphicon glyphicon-transfer"></span>
           </a>
         </li>
-        <li class="sidebar-title"><span>NAVIGATION</span></li>
+        <li class="sidebar-title"><span>{{ 'NAVIGATION' | translate }}</span></li>
         <li class="sidebar-list">
-          <a href="#">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
+          <a href="#">{{ 'DASHBOARD' | translate }} <span class="menu-icon fa fa-tachometer"></span></a>
         </li>
         <li class="sidebar-list">
-          <a href="#/tables">Tables <span class="menu-icon fa fa-table"></span></a>
+          <a href="#/tables">{{ 'TABLES' | translate }} <span class="menu-icon fa fa-table"></span></a>
         </li>
       </ul>
       <div class="sidebar-footer">
         <div class="col-xs-4">
           <a href="https://github.com/rdash/rdash-angular" target="_blank">
-            Github
+            {{ 'GITHUB' | translate }}
           </a>
         </div>
         <div class="col-xs-4">
           <a href="https://github.com/rdash/rdash-angular/README.md" target="_blank">
-            About
+            {{ 'ABOUT' | translate }}
           </a>
         </div>
         <div class="col-xs-4">
           <a href="#">
-            Support
+            {{ 'SUPPORT' | translate }}
           </a>
         </div>
       </div>
@@ -63,11 +64,23 @@
 
     <div id="content-wrapper">
       <div class="page-content">
-
         <!-- Header Bar -->
         <div class="row header">
           <div class="col-xs-12">
             <div class="user pull-right">
+              <div class="item dropdown" uib-dropdown>
+                  <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
+                      <i class="fa fa-flag"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-right" ng-controller="TranslateCtrl">
+                      <li class="link">
+                        <a href="javascript:void(0)" ng-click="changeLanguage('hu')" translate="BUTTON_TEXT_HU"></a>
+                      </li>
+                      <li class="link">
+                        <a href="javascript:void(0)" ng-click="changeLanguage('en')" translate="BUTTON_TEXT_EN"></a>
+                      </li>
+                  </ul>
+              </div>
               <div class="item dropdown" uib-dropdown>
                 <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
                   <img src="img/avatar.jpg">
@@ -117,10 +130,10 @@
             </div>
             <div class="meta">
               <div class="page">
-                Dashboard
+                {{ 'DASHBOARD' | translate }}
               </div>
               <div class="breadcrumb-links">
-                Home / Dashboard
+                {{ 'HOME' | translate }} / {{ 'DASHBOARD' | translate }}
               </div>
             </div>
           </div>

@@ -4,7 +4,7 @@
 
 rdash-angular is an AngularJS implementation of the RDash admin dashboard. The dashboard uses a small number of modules to get you started, along with some handy directives and controllers to speed up development using the dashboard.
 
-Check out the live example!
+Check out the [live example](http://rdash.github.io/)!
 
 ## Usage
 ### Requirements

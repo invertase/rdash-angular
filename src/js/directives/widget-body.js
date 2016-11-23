@@ -10,7 +10,7 @@ function rdWidgetBody() {
     var directive = {
         requires: '^rdWidget',
         scope: {
-            loading: '@?',
+            loading: '=?',
             classes: '@?'
         },
         transclude: true,
